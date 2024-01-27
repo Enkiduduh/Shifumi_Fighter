@@ -8,34 +8,51 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Honk&family=Londrina+Solid:wght@100;300;400;900&family=Mountains+of+Christmas:wght@400;700&family=Nova+Square&family=Permanent+Marker&family=Pirata+One&family=Press+Start+2P&family=Rancho&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">  </head>
   <body>
     <section title="characters-zones">
       <div class="characters-zones-container">
         <div class="characters-zones" id="cz1">
-          <div class="characters-zones-life-bg">
-            <div class="characters-zones-life" id="life-1"></div>
-          </div>
-          <div class="characters-zones-sprite1">
+          <span>Player 1 - Health</span>
+          <div class="testest">
             <div id="sprite-1"></div>
-            <div id="player_name-1"></div>
-            <div id="player_victory_counter_1a"></div>
-            <div id="player_victory_counter_1b"></div>
+            <div class="characters-zones-life-bg">
+              <div class="characters-zones-life" id="life-1"></div>
+              <div class="test2">
+                <div id="player_name-1"></div>
+                <div class="victory_counter_player1" id="1a"></div>
+                <div class="victory_counter_player1" id="1b"></div>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="characters-zones-versus">
-          <div id="turn_counter">Tour: </div>
-          <div id="versus"><img id="img_versus"src="assets/img/versus_img.png" alt=""></div>
-        </div>
-        <div class="characters-zones" id="cz2">
-          <div class="characters-zones-life-bg">
-            <div class="characters-zones-life" id="life-2"></div>
+          <div>
+            <div id="timer"><span>99</span></div>
+            <div id="versus"><img id="img_versus"src="assets/img/versus_img.png" alt=""></div>
+            <div id="turn_counter"><span>Tour: </span></div>
           </div>
-          <div class="characters-zones-sprite2">
-            <div id="player_victory_counter_2a"></div>
-            <div id="player_victory_counter_2b"></div>
-            <div id="player_name-2"></div>
+        </div>
+
+        <div class="characters-zones" id="cz2">
+          <div class="cz2_2">
+            <span>Player 2 - Health</span>
+          </div>
+          <div class="testest">
             <div id="sprite-2"></div>
+            <div class="characters-zones-life-bg">
+              <div class="characters-zones-life" id="life-2"></div>
+              <div class="test2">
+                <div id="player_name-2"></div>
+                <div class="victory_counter_player2" id="2a"></div>
+                <div class="victory_counter_player2" id="2b"></div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -77,8 +94,8 @@
       </div>
       <div class="player-confirmation">
         <span>Etes-vous sûr de votre choix?</span>
-        <div class="pc-yes">Oui</div>
-        <div class="pc-no">Non</div>
+        <div class="pc-yes"><span>Oui</span></div>
+        <div class="pc-no"><span>Non</span></div>
       </div>
     </section>
     <script src="scripts/index.js" async defer></script>

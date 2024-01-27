@@ -7,8 +7,8 @@ const textZone4 = document.querySelector(".tzc4");
 const zonesLife = document.querySelectorAll(".characters-zones-life");
 const playerHealthBar = document.getElementById("life-1");
 const adversaryHealthBar = document.getElementById("life-2");
-const player = {health: 280};
-const adversary = {health: 280};
+const player = {health: 330};
+const adversary = {health: 330};
 const turnCounter = document.getElementById("turn_counter");
 const counter = {time: 0};
 
@@ -133,11 +133,11 @@ function combat(str_choice, text_zone2, text_zone3, time) {
 
 function damageCalculator(player1 , player2, player1_life, player2_life, str) {
   if (str == "Bien joué ! Votre adversaire perd 1 PV !") {
-    player2.health -= 28;
+    player2.health -= 33;
     player2_life.style.width = `${player2.health}px`;
 
   } else if (str == "Attention ! Vous perdez 1 PV !") {
-    player1.health -= 28;
+    player1.health -= 33;
     player1_life.style.width = `${player1.health}px`;
 
   }
@@ -158,8 +158,8 @@ if (adversary.health <= 80) {
 };
 
 function initializingBattle() {
-  player.health = 280;
-  adversary.health = 280;
+  player.health = 330;
+  adversary.health = 330;
   counter.time = 0;
   textZone1.textContent = "Veuillez choisir une action.";
   textZone2.textContent = "";
@@ -223,44 +223,60 @@ function selectCharacter() {
         let characterPortrait = "";
         if (characterName == "Crystal Mauler") {
           textZone3.style.color = "#85dbf2";
+          player1Name.style.background = "#85dbf2";
           playerChoice = true;
           characterPortrait = "crystal_mauler.png";
         } else if (characterName == "Fire Knight") {
           textZone3.style.color = "#ee692f";
+          player1Name.style.background = "#ee692f";
           playerChoice = true;
           characterPortrait = "fire_knight.png";
         } else if (characterName == "Metal Bladekeeper") {
           textZone3.style.color = "#c3c0c6";
+          player1Name.style.background = "#c3c0c6";
           playerChoice = true;
           characterPortrait = "metal_bladekeeper.png";
         } else if (characterName == "Leaf Ranger") {
           textZone3.style.color = "#11eb03";
+          player1Name.style.background = "#11eb03";
           playerChoice = true;
           characterPortrait = "leaf_ranger.png";
         } else {
-          textZone3.style.color = "#1246a9";
+          textZone3.style.color = "#3a8bf9";
+          player1Name.style.background = "#3a8bf9";
           playerChoice = true;
           characterPortrait = "water_priestess.png";
         }
 
         if (randomP2Name == "Crystal Mauler") {
           textZone4.style.color = "#85dbf2";
+          player2Name.style.background = "#85dbf2";
+
         } else if (randomP2Name == "Fire Knight") {
           textZone4.style.color = "#ee692f";
+          player2Name.style.background = "#ee692f";
+
         } else if (randomP2Name == "Metal Bladekeeper") {
           textZone4.style.color = "#c3c0c6";
+          player2Name.style.background = "#c3c0c6";
+
         } else if (randomP2Name == "Leaf Ranger") {
           textZone4.style.color = "#11eb03";
+          player2Name.style.background = "#11eb03";
         } else {
-          textZone4.style.color = "#1246a9";
+          textZone4.style.color = "#3a8bf9";
+          player2Name.style.background = "#3a8bf9";
         }
 
         textZone3.textContent = `Vous avez choisi ${characterName}.`;
         imgPlayer1.innerHTML = `<img src="assets/img/portraits/${characterPortrait}" alt="${characterPortrait}">`;
+        player1Name.style.fontFamily = "Nova Square, sans-serif";
+        player1Name.style.fontWeight = "bold";
         player1Name.textContent = characterName;
         confirmation.style.display = "flex";
-
         player2Name.textContent = randomP2Name;
+        player2Name.style.fontFamily = "Nova Square, sans-serif";
+        player2Name.style.fontWeight = "bold";
         imgPlayer2.innerHTML = `<img src="assets/img/portraits/${characters[`char${random}`].portrait}" alt="${characters[`char${random}`].portrait}">`;
         textZone4.textContent = `Votre adversaire a choisi ${randomP2Name}.`;
 
@@ -278,6 +294,10 @@ function validatorChoice(choiceBtn1, choiceBtn2) {
     textZone4.textContent = "";
     imgPlayer1.innerHTML = "";
     player1Name.textContent = "";
+    player1Name.style.background = "white";
+    imgPlayer2.innerHTML = "";
+    player2Name.textContent = "";
+    player2Name.style.background = "white";
     confirmation.style.display = "none";
     removeTextColor(textZone1, textZone2, textZone3, textZone4);
     selectCharacter();
@@ -291,5 +311,9 @@ function validatorChoice(choiceBtn1, choiceBtn2) {
     initializingBattle();
   });
 };
+
+function roundVictory() {
+
+}
 
 selectCharacter();
