@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html id="html">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,18 +14,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Honk&family=Londrina+Solid:wght@100;300;400;900&family=Mountains+of+Christmas:wght@400;700&family=Nova+Square&family=Permanent+Marker&family=Pirata+One&family=Press+Start+2P&family=Rancho&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">  </head>
   <body>
+  <div id="main-screen">
+
     <section title="characters-zones">
+      <div id="title-game"><h1>Shifumi Fighter</h1></div>
       <div class="characters-zones-container">
         <div class="characters-zones" id="cz1">
-          <span>Player 1 - Health</span>
-          <div class="testest">
+          <span>Player 1 - Human</span>
+          <div class="flex-bars-sprite">
             <div id="sprite-1"></div>
-            <div class="characters-zones-life-bg">
-              <div class="characters-zones-life" id="life-1"></div>
-              <div class="test2">
-                <div id="player_name-1"></div>
-                <div class="victory_counter_player1" id="1a"></div>
-                <div class="victory_counter_player1" id="1b"></div>
+            <div class="bars">
+              <div class="characters-zones-life-bg" id="czl-bg1">
+                <div class="characters-zones-life" id="life-1"></div>
+              </div>
+                <div class="flex-name-victory">
+                  <div id="player_name-1"></div>
+                  <div class="victory-container">
+                    <div class="victory_counter_player1" id="1a"></div>
+                    <div class="victory_counter_player1" id="1b"></div>
+                  </div>
               </div>
             </div>
           </div>
@@ -35,28 +42,33 @@
           <div>
             <div id="timer"><span>99</span></div>
             <div id="versus"><img id="img_versus"src="assets/img/versus_img.png" alt=""></div>
-            <div id="turn_counter"><span>Tour: </span></div>
+            <div id="turn_counter"></div>
           </div>
         </div>
 
         <div class="characters-zones" id="cz2">
           <div class="cz2_2">
-            <span>Player 2 - Health</span>
+            <span>Player 2 - CPU </span>
           </div>
-          <div class="testest">
+          <div class="flex-bars-sprite">
             <div id="sprite-2"></div>
-            <div class="characters-zones-life-bg">
-              <div class="characters-zones-life" id="life-2"></div>
-              <div class="test2">
-                <div id="player_name-2"></div>
-                <div class="victory_counter_player2" id="2a"></div>
-                <div class="victory_counter_player2" id="2b"></div>
+            <div class="bars">
+              <div class="characters-zones-life-bg" id="cz2-bg2">
+                <div class="characters-zones-life" id="life-2"></div>
+              </div>
+                <div class="flex-name-victory">
+                  <div id="player_name-2"></div>
+                  <div class="victory-container">
+                    <div class="victory_counter_player2" id="2a"></div>
+                    <div class="victory_counter_player2" id="2b"></div>
+                  </div>
+              </div>
             </div>
-
           </div>
         </div>
       </div>
     </section>
+  </div>
     <section title="actions-btn-zones">
       <div class="actions-btn-container">
         <div class="actions-btn" id="btn-atk">
@@ -73,6 +85,7 @@
         </div>
       </div>
     </section>
+
     <section title="text-zone">
       <div class="text-zone-container">
         <span class="tzc1"></span>
@@ -84,6 +97,7 @@
         <span class="tzc4"></span>
       </div>
     </section>
+
     <section title="player_selector">
       <div class="player_selector-container">
         <div class="player-portrait"></div>
@@ -98,6 +112,25 @@
         <div class="pc-no"><span>Non</span></div>
       </div>
     </section>
+
+    <section title="level_selector">
+      <div class="level_selector-container">
+        <div class="level"></div>
+        <div class="level"></div>
+        <div class="level"></div>
+        <div class="level"></div>
+        <div class="level"></div>
+        <div class="level"></div>
+        <div class="level"></div>
+      </div>
+      <div class="level-confirmation">
+        <span>Etes-vous sûr de votre choix?</span>
+        <div class="pc-yes"><span>Oui</span></div>
+        <div class="pc-no"><span>Non</span></div>
+      </div>
+    </section>
+
     <script src="scripts/index.js" async defer></script>
+    <script src="scripts/data.js"></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 const actionButtons = document.querySelectorAll(".actions-btn");
+const actionsButtonsSection =document.querySelector(".actions-btn-container");
 const textZone = document.querySelector(".text-zone-container");
 const textZone1 = document.querySelector(".tzc1");
 const textZone2 = document.querySelector(".tzc2");
@@ -20,9 +21,17 @@ const imgPlayer2 = document.getElementById("sprite-2");
 const yesBtn = document.querySelector(".pc-yes");
 const noBtn = document.querySelector(".pc-no");
 
+const levels = document.querySelectorAll(".level");
+const levelsSection = document.querySelector(".level_selector-container");
+
 const player1Name = document.getElementById("player_name-1");
 const player2Name = document.getElementById("player_name-2");
 const confirmation = document.querySelector(".player-confirmation");
+const mainScreen = document.getElementById("html");
+
+const characterZoneContainer = document.querySelector(".characters-zones-container");
+const gameTitle = document.getElementById("title-game");
+
 
 const characters = {
   char0: {
@@ -51,6 +60,53 @@ const characters = {
     id: 4
   }
 };
+
+const background_levels = {
+  0: {
+      name: "Dragon 01",
+      field: "bg_cbt_0.gif",
+      id: 0,
+      bgm: "1-Phat-Phrog-Studios-Legendary-Bosses-Inferno-Serpent.mp3"
+  },
+  1: {
+    name: "Dragon 02",
+    field: "bg_cbt_1.gif",
+    id: 1,
+    bgm:"2-Phat-Phrog-Studios-Legendary-Bosses-Abyssal-Behemoth.mp3"
+  },
+  2: {
+    name: "Falls 01",
+    field: "bg_cbt_2.gif",
+    id: 2,
+    bgm:"3-Phat-Phrog-Studios-Legendary-Bosses-Celestial-Dragon.mp3"
+  },
+  3: {
+    name: "Falls 02",
+    field: "bg_cbt_3.gif",
+    id: 3,
+    bgm:"5-Phat-Phrog-Studios-Legendary-Bosses-Ice-Marauder.mp3"
+  },
+  4: {
+    name: "Falls 03",
+    field: "bg_cbt_4.gif",
+    id: 4,
+    bgm:"8-Phat-Phrog-Studios-Legendary-Bosses-Sunfire-Phoenix.mp3"
+  },
+  5: {
+    name: "Ruins 01",
+    field: "bg_cbt_5.gif",
+    id: 5,
+    bgm:"9-Phat-Phrog-Studios-Legendary-Bosses-Moonlit-Nightmare.mp3"
+  },
+  6: {
+    name: "House in Fire 01",
+    field: "bg_cbt_6.gif",
+    id: 6,
+    bgm:"10-Phat-Phrog-Studios-Legendary-Bosses-Whirlwind-Wraith.mp3"
+  }
+};
+
+
 
 function actions() {
   actionButtons.forEach(button => {
@@ -121,7 +177,7 @@ function combat(str_choice, text_zone2, text_zone3, time) {
     result = `Attention ! Vous perdez 1 PV !`;
     time.time += 1;
   }
-  turnCounter.textContent = `Tour: ${time.time}`;
+  turnCounter.innerHTML = `<span class="shadowed-text">Tour: ${time.time}</span>`;
   damageCalculator(player , adversary, playerHealthBar, adversaryHealthBar, result);
   displayHealthBar();
   console.log(player)
@@ -145,15 +201,23 @@ function damageCalculator(player1 , player2, player1_life, player2_life, str) {
 
 function displayHealthBar() {
 if (player.health <= 80) {
-  playerHealthBar.style.background = "red";
+  playerHealthBar.classList.add("lifebar-red");
+  playerHealthBar.classList.remove("lifebar-orange");
+  playerHealthBar.classList.remove("lifebar-green");
 } else if (player.health <= 140) {
-  playerHealthBar.style.background = "orange";
+  playerHealthBar.classList.add("lifebar-orange");
+  playerHealthBar.classList.remove("lifebar-red");
+  playerHealthBar.classList.remove("lifebar-green");
 }
 
 if (adversary.health <= 80) {
-  adversaryHealthBar.style.background = "red";
+  adversaryHealthBar.classList.add("lifebar-red");
+  adversaryHealthBar.classList.remove("lifebar-orange");
+  adversaryHealthBar.classList.remove("lifebar-green");
 } else if (adversary.health <= 140) {
-  adversaryHealthBar.style.background = "orange";
+  adversaryHealthBar.classList.add("lifebar-orange");
+  adversaryHealthBar.classList.remove("lifebar-red");
+  adversaryHealthBar.classList.remove("lifebar-green");
 }
 };
 
@@ -164,6 +228,8 @@ function initializingBattle() {
   textZone1.textContent = "Veuillez choisir une action.";
   textZone2.textContent = "";
   textZone3.textContent = "";
+  playerHealthBar.classList.add("lifebar-green");
+  adversaryHealthBar.classList.add("lifebar-green");
   actions();
 };
 
@@ -209,6 +275,7 @@ function characterChoice(obj) {
 let playerChoice = false;
 
 function selectCharacter() {
+  characterZoneContainer.style.display = "none";
   textZone1.textContent = "Bienvenue dans l'arène Invocateur.";
   textZone2.textContent = "Veuillez choisir votre combattant.";
   characterChoice(characters);
@@ -286,6 +353,21 @@ function selectCharacter() {
   validatorChoice(yesBtn, noBtn)
 };
 
+function levelChoice(obj) {
+  for (i = 0; i < levels.length; i++) {
+    const level = levels[i];
+    if (background_levels[i]) {
+      level.style.backgroundImage = `url(../assets/img/backgrounds/bg_cbt_${i}.gif)`;
+    }
+
+  }
+};
+levelChoice(background_levels)
+
+function levelSelector() {
+
+};
+
 function validatorChoice(choiceBtn1, choiceBtn2) {
   choiceBtn2.addEventListener("click", function() {
     textZone1.textContent = "Bienvenue dans l'arène Invocateur.";
@@ -308,10 +390,15 @@ function validatorChoice(choiceBtn1, choiceBtn2) {
     portraitSection.style.display = "none";
     textZone3.textContent = "....Combattez !"
     textZone4.textContent = "";
+    mainScreen.style.backgroundImage = "url(../assets/img/backgrounds/bg_cbt_dragon_01.gif)";
+    mainScreen.style.backgroundRepeat = "no-repeat";
+    mainScreen.style.backgroundSize = "cover";
+    mainScreen.style.backgroundPosition = "center";
+    actionsButtonsSection.style.display = "block";
+    characterZoneContainer.style.display = "flex";
     initializingBattle();
   });
 };
-
 function roundVictory() {
 
 }
