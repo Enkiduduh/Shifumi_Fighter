@@ -1,20 +1,52 @@
 html {
   padding: 0px;
-  border:10px solid yellow;
+  margin: 0px;
+  // border:10px solid yellow;
   background:rgb(186, 222, 236);
-  height: 680px;
+  height: 100vh;
   span {
     font-family: 'Nova Square', sans-serif;
     font-weight: bold;
   }
 }
-#title-game {
-  h1 {
-    font-family: 'Honk', system-ui;
-    font-size: 120px;
+
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.startScreen {
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-image: url("../assets/img/backgrounds/bg_cbt_0.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  #title-game {
+    h1 {
+      font-family: 'Honk', system-ui;
+      font-size: 140px;
+      text-align: center;
+      margin: 0px;
+    }
+  }
+  #gameStartBtn {
+    h2 {
+      font-family: 'Honk', system-ui;
+      font-size: 70px;
+      text-align: center;
+      margin: 0px;
+    }
+  }
+  #gameInfos {
+    font-family: 'Nova Square', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
     text-align: center;
-    margin-bottom: 20px;
-    // letter-spacing: 1px;
+    color: white;
+    text-shadow: 4px 4px 4px #020b0d;
   }
 }
 

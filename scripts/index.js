@@ -404,3 +404,10 @@ function roundVictory() {
 }
 
 selectCharacter();
+
+function pressStart() {
+  portraitSection.style.display = "none";
+  levelsSection.style.display = "none";
+  textZone.style.display = "none";
+}
+pressStart();
