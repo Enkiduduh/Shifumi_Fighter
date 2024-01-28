@@ -23,6 +23,7 @@ body, h1, h2, h3, p, ul, li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 .startScreen #title-game h1 {
   font-family: "Honk", system-ui;
@@ -30,7 +31,7 @@ body, h1, h2, h3, p, ul, li {
   text-align: center;
   margin: 0px;
 }
-.startScreen #gameStartBtn h2 {
+.startScreen #gameStartBtn {
   font-family: "Honk", system-ui;
   font-size: 70px;
   text-align: center;
@@ -396,4 +397,69 @@ body, h1, h2, h3, p, ul, li {
 .level-confirmation .pc-yes:hover, .level-confirmation .pc-no:hover {
   box-shadow: rgb(32, 125, 175) 0px 8px 24px;
   background: rgb(70, 157, 84);
+}
+
+.puffOut {
+  animation-name: puffOut;
+  animation-duration: 3s;
+}
+@keyframes puffOut {
+  0% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(2px);
+  }
+}
+.mainMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+}
+.mainMenu #arcade {
+  margin-left: 10px;
+}
+.mainMenu #versus {
+  margin-left: 30px;
+}
+.mainMenu #bonus {
+  margin-left: 50px;
+}
+.mainMenu #score {
+  margin-left: 70px;
+}
+.mainMenu #options {
+  margin-left: 90px;
+}
+.mainMenu #return {
+  margin-left: 110px;
+}
+.mainMenu .menu {
+  width: 250px;
+}
+.mainMenu .menu h2 {
+  width: 250px;
+  text-align: center;
+  font-family: "Honk", system-ui;
+  font-size: 50px;
+  margin: 15px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border: 5px solid transparent;
+  background-image: linear-gradient(to right, #69189E, #69189E), linear-gradient(to right, #69189E, #69189E);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0px 0px 0px 5px lightblue, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 8px 6px 50px 11px rgba(255, 255, 255, 0);
+  transition: margin-left 330ms ease-in-out;
+}
+.mainMenu .menu h2:hover {
+  margin-left: 60px;
+  background-image: linear-gradient(to right, gold, #69189E), linear-gradient(to right, gold, #69189E);
 }/*# sourceMappingURL=style.css.map */

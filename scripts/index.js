@@ -30,8 +30,12 @@ const confirmation = document.querySelector(".player-confirmation");
 const mainScreen = document.getElementById("html");
 
 const characterZoneContainer = document.querySelector(".characters-zones-container");
-const gameTitle = document.getElementById("title-game");
+const gameScreenTitle = document.querySelector(".startScreen");
+const gameStartBtn = document.getElementById("gameStartBtn");
+const audioPlayZone = document.getElementById("audioPlayZone");
+const audioPlayZone2 = document.getElementById("audioPlayZone2");
 
+const mainMenu = document.querySelector(".mainMenu");
 
 const characters = {
   char0: {
@@ -60,6 +64,25 @@ const characters = {
     id: 4
   }
 };
+
+const bgm = {
+  mainScreen: {
+    name: "Title Theme",
+    bgm: "main-title.mp3"
+  },
+  mainMenu: {
+    name: "Main Menu Theme",
+    bgm: "main-menu.mp3"
+  },
+  pressStart: {
+    name: "Enter game",
+    bgm: "push_start.wav"
+  },
+  enterChoiceMenu: {
+    name: "Enter in menu",
+    bgm: "enter_menu.wav"
+  }
+}
 
 const background_levels = {
   0: {
@@ -405,9 +428,62 @@ function roundVictory() {
 
 selectCharacter();
 
+let animationCompleted = false;
+
 function pressStart() {
   portraitSection.style.display = "none";
   levelsSection.style.display = "none";
   textZone.style.display = "none";
+  mainMenu.style.display = "none";
+  playSound(bgm.mainScreen.bgm);
+
+  gameStartBtn.addEventListener("click", function(){
+    if(!animationCompleted) {
+      gameStartBtn.classList.add("puffOut");
+      stopSound();
+      playSound(bgm.pressStart.bgm);
+      gameStartBtn.addEventListener("animationend", function() {
+        gameStartBtn.classList.remove("puffOut");
+        animationCompleted = true;
+        Menu();
+      });
+    }
+  });
 }
 pressStart();
+
+function playSound(soundElement){
+  const soundToPlay = `<audio id="audioPlay" src="assets/bgm/${soundElement}" preload="auto" hidden></audio>`;
+  audioPlayZone.innerHTML = soundToPlay;
+  const audioPlay = document.getElementById("audioPlay");
+  audioPlay.play();
+}
+function playSound2(soundElement){
+  const soundToPlay = `<audio id="audioPlay2" src="assets/bgm/${soundElement}" preload="auto" hidden></audio>`;
+  audioPlayZone2.innerHTML = soundToPlay;
+  const audioPlay2 = document.getElementById("audioPlay2");
+  audioPlay2.play();
+}
+
+function stopSound(){
+  const audioPlay = document.getElementById("audioPlay");
+  audioPlay.pause();
+  audioPlay.currentTime = 0;
+}
+
+const menus = document.querySelectorAll(".menu");
+
+function Menu(){
+  gameScreenTitle.style.display = "none";
+  mainMenu.style.display = "flex";
+  mainScreen.style.backgroundImage = "url(../assets/img/backgrounds/bg_cbt_1.gif)";
+  mainScreen.style.backgroundRepeat = "no-repeat";
+  mainScreen.style.backgroundSize = "cover";
+  mainScreen.style.backgroundPosition = "center";
+  playSound(bgm.mainMenu.bgm);
+  menus.forEach(menu => {
+    menu.addEventListener("click", function(){
+      playSound2(bgm.enterChoiceMenu.bgm);
+    });
+  });
+};
