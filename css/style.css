@@ -18,7 +18,7 @@ body, h1, h2, h3, p, ul, li {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-image: url("../assets/img/backgrounds/bg_cbt_0.gif");
   background-position: center;
   background-repeat: no-repeat;
@@ -420,7 +420,7 @@ body, h1, h2, h3, p, ul, li {
 .mainMenu {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   height: 100vh;
 }
 .mainMenu #arcade {
@@ -449,7 +449,7 @@ body, h1, h2, h3, p, ul, li {
   text-align: center;
   font-family: "Honk", system-ui;
   font-size: 50px;
-  margin: 15px;
+  margin: 10px;
   border-top-right-radius: 30px;
   border-bottom-left-radius: 30px;
   border: 5px solid transparent;

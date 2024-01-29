@@ -150,162 +150,6 @@ const background_levels = {
 };
 
 
-
-function actions() {
-  actionButtons.forEach(button => {
-    button.addEventListener("click", function() {
-      textZone1.innerHTML = "";
-      let actionMessage = "";
-      let actionChoice = "";
-      if (button.id == "btn-atk") {
-        actionChoice = "Attaque";
-        textZone1.classList.add("textColor_atk");
-        textZone1.classList.remove("textColor_mag");
-        textZone1.classList.remove("textColor_def");
-      } else if (button.id == "btn-mag") {
-        actionChoice = "Magie";
-        textZone1.classList.add("textColor_mag");
-        textZone1.classList.remove("textColor_atk");
-        textZone1.classList.remove("textColor_def");
-      } else {
-        actionChoice = "Défense";
-        textZone1.classList.add("textColor_def");
-        textZone1.classList.remove("textColor_atk");
-        textZone1.classList.remove("textColor_mag");
-      }
-      actionMessage = `Vous avez choisi le boutton d'action ${actionChoice}.`;
-      textZone1.innerHTML = actionMessage;
-      combat(actionChoice,textZone2, textZone3, counter);
-
-    });
-  });
-}
-
-function combat(str_choice, text_zone2, text_zone3, time) {
-  let resultAdversary = "";
-  let actionChoiceAdversary="";
-  let result = "";
-  const adversaryChoice = ["Attaque", "Magie", "Défense"];
-  actionChoiceAdversary = adversaryChoice[Math.floor(Math.random() * 3)];
-  if (actionChoiceAdversary == "Attaque") {
-    textZone2.classList.add("textColor_atk");
-    textZone2.classList.remove("textColor_mag");
-    textZone2.classList.remove("textColor_def");
-  } else if (actionChoiceAdversary == "Magie") {
-    textZone2.classList.add("textColor_mag");
-    textZone2.classList.remove("textColor_atk");
-    textZone2.classList.remove("textColor_def");
-  } else {
-    textZone2.classList.add("textColor_def");
-    textZone2.classList.remove("textColor_atk");
-    textZone2.classList.remove("textColor_mag");
-  }
-
-  if (str_choice == "Attaque" && actionChoiceAdversary == "Magie"
-    || str_choice == "Magie" && actionChoiceAdversary == "Défense"
-    || str_choice == "Défense" && actionChoiceAdversary == "Attaque")
-  {
-    resultAdversary = `Votre adversaire a choisi le boutton d'action ${actionChoiceAdversary}.`;
-    result = `Bien joué ! Votre adversaire perd 1 PV !`;
-    time.time += 1;
-  } else if (str_choice == "Attaque" && actionChoiceAdversary == "Attaque"
-  || str_choice == "Magie" && actionChoiceAdversary == "Magie"
-  || str_choice == "Défense" && actionChoiceAdversary == "Défense")
-  {
-    resultAdversary = `Votre adversaire a choisi le boutton d'action ${actionChoiceAdversary}.`;
-    result =`Egalité ! Le combat fait rage !`;
-    time.time += 1;
-  } else {
-    resultAdversary = `Votre adversaire a choisi le boutton d'action ${actionChoiceAdversary}.`;
-    result = `Attention ! Vous perdez 1 PV !`;
-    time.time += 1;
-  }
-  turnCounter.innerHTML = `<span class="shadowed-text">Tour: ${time.time}</span>`;
-  damageCalculator(player , adversary, playerHealthBar, adversaryHealthBar, result);
-  displayHealthBar();
-  console.log(player)
-  console.log(adversary)
-  text_zone2.innerHTML = resultAdversary;
-  text_zone3.innerHTML = result;
-  combatEnding(player, adversary);
-};
-
-function damageCalculator(player1 , player2, player1_life, player2_life, str) {
-  if (str == "Bien joué ! Votre adversaire perd 1 PV !") {
-    player2.health -= 33;
-    player2_life.style.width = `${player2.health}px`;
-
-  } else if (str == "Attention ! Vous perdez 1 PV !") {
-    player1.health -= 33;
-    player1_life.style.width = `${player1.health}px`;
-
-  }
-};
-
-function displayHealthBar() {
-if (player.health <= 80) {
-  playerHealthBar.classList.add("lifebar-red");
-  playerHealthBar.classList.remove("lifebar-orange");
-  playerHealthBar.classList.remove("lifebar-green");
-} else if (player.health <= 140) {
-  playerHealthBar.classList.add("lifebar-orange");
-  playerHealthBar.classList.remove("lifebar-red");
-  playerHealthBar.classList.remove("lifebar-green");
-}
-
-if (adversary.health <= 80) {
-  adversaryHealthBar.classList.add("lifebar-red");
-  adversaryHealthBar.classList.remove("lifebar-orange");
-  adversaryHealthBar.classList.remove("lifebar-green");
-} else if (adversary.health <= 140) {
-  adversaryHealthBar.classList.add("lifebar-orange");
-  adversaryHealthBar.classList.remove("lifebar-red");
-  adversaryHealthBar.classList.remove("lifebar-green");
-}
-};
-
-function initializingBattle() {
-  player.health = 330;
-  adversary.health = 330;
-  counter.time = 0;
-  textZone1.textContent = "Veuillez choisir une action.";
-  textZone2.textContent = "";
-  textZone3.textContent = "";
-  playerHealthBar.classList.add("lifebar-green");
-  adversaryHealthBar.classList.add("lifebar-green");
-  actions();
-};
-
-function combatEnding(player , adversary) {
-  if (adversary.health <= 0) {
-    removeTextColor(textZone1, textZone2, textZone3, textZone4);
-    result = `Bravo ! Vous avez remporté la victoire !!`;
-    textZone1.textContent = "...";
-    textZone2.textContent = `Le combat a duré ${counter.time} tours.`;
-    textZone3.textContent = result;
-  } else if (player.health <= 0) {
-    removeTextColor(textZone1, textZone2, textZone3, textZone4);
-    result = `Dommage ! Votre adversaire a triomphé de vous !!`;
-    textZone1.textContent = "...";
-    textZone2.textContent = `Le combat a duré ${counter.time} tours.`;
-    textZone3.textContent = result;
-  }
-}
-
-function removeTextColor(zoneText1,zoneText2, zoneText3, zoneText4) {
-    zoneText1.classList.remove("textColor_def");
-    zoneText1.classList.remove("textColor_atk");
-    zoneText1.classList.remove("textColor_mag");
-    zoneText2.classList.remove("textColor_def");
-    zoneText2.classList.remove("textColor_atk");
-    zoneText2.classList.remove("textColor_mag");
-    zoneText3.classList.remove("textColor_def");
-    zoneText3.classList.remove("textColor_atk");
-    zoneText3.classList.remove("textColor_mag");
-    zoneText3.style.color = "black";
-    zoneText4.style.color = "black";
-}
-
 function characterChoice(obj) {
     for (i = 0; i < portraits.length; i++) {
       const portrait = portraits[i];
@@ -318,7 +162,7 @@ function characterChoice(obj) {
 let playerChoice = false;
 
 function selectCharacter() {
-  characterZoneContainer.style.display = "none";
+  // characterZoneContainer.style.display = "none";
   textZone1.textContent = "Bienvenue dans l'arène Invocateur.";
   textZone2.textContent = "Veuillez choisir votre combattant.";
   characterChoice(characters);
@@ -396,20 +240,6 @@ function selectCharacter() {
   validatorChoice(yesBtn, noBtn)
 };
 
-function levelChoice(obj) {
-  for (i = 0; i < levels.length; i++) {
-    const level = levels[i];
-    if (background_levels[i]) {
-      level.style.backgroundImage = `url(../assets/img/backgrounds/bg_cbt_${i}.gif)`;
-    }
-
-  }
-};
-levelChoice(background_levels)
-
-function levelSelector() {
-
-};
 
 function validatorChoice(choiceBtn1, choiceBtn2) {
   choiceBtn2.addEventListener("click", function() {
@@ -442,35 +272,12 @@ function validatorChoice(choiceBtn1, choiceBtn2) {
     initializingBattle();
   });
 };
-function roundVictory() {
 
-}
 
 selectCharacter();
 
-let animationCompleted = false;
 
-function pressStart() {
-  portraitSection.style.display = "none";
-  levelsSection.style.display = "none";
-  textZone.style.display = "none";
-  mainMenu.style.display = "none";
-  playSound(bgm.mainScreen.bgm);
 
-  gameStartBtn.addEventListener("click", function(){
-    if(!animationCompleted) {
-      gameStartBtn.classList.add("puffOut");
-      stopSound();
-      playSound(bgm.pressStart.bgm);
-      gameStartBtn.addEventListener("animationend", function() {
-        gameStartBtn.classList.remove("puffOut");
-        animationCompleted = true;
-        Menu();
-      });
-    }
-  });
-}
-pressStart();
 
 function playSound(soundElement){
   const soundToPlay = `<audio id="audioPlay" src="assets/bgm/${soundElement}" preload="auto" hidden></audio>`;
@@ -493,17 +300,17 @@ function stopSound(){
 
 const menus = document.querySelectorAll(".menu");
 
-function Menu(){
-  gameScreenTitle.style.display = "none";
-  mainMenu.style.display = "flex";
-  mainScreen.style.backgroundImage = "url(../assets/img/backgrounds/bg_cbt_1.gif)";
-  mainScreen.style.backgroundRepeat = "no-repeat";
-  mainScreen.style.backgroundSize = "cover";
-  mainScreen.style.backgroundPosition = "center";
-  playSound(bgm.mainMenu.bgm);
-  menus.forEach(menu => {
-    menu.addEventListener("click", function(){
-      playSound2(bgm.enterChoiceMenu.bgm);
-    });
-  });
-};
+// function Menu(){
+//   gameScreenTitle.style.display = "none";
+//   mainMenu.style.display = "flex";
+//   mainScreen.style.backgroundImage = "url(../assets/img/backgrounds/bg_cbt_2.gif)";
+//   mainScreen.style.backgroundRepeat = "no-repeat";
+//   mainScreen.style.backgroundSize = "cover";
+//   mainScreen.style.backgroundPosition = "center";
+//   playSound(bgm.mainMenu.bgm);
+//   menus.forEach(menu => {
+//     menu.addEventListener("click", function(){
+//       playSound2(bgm.enterChoiceMenu.bgm);
+//     });
+//   });
+// };
