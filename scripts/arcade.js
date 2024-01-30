@@ -162,7 +162,7 @@ function characterChoice(obj) {
 let playerChoice = false;
 
 function selectCharacter() {
-  // characterZoneContainer.style.display = "none";
+  characterZoneContainer.style.display = "none";
   textZone1.textContent = "Bienvenue dans l'arène Invocateur.";
   textZone2.textContent = "Veuillez choisir votre combattant.";
   characterChoice(characters);
@@ -241,40 +241,40 @@ function selectCharacter() {
 };
 
 
-function validatorChoice(choiceBtn1, choiceBtn2) {
-  choiceBtn2.addEventListener("click", function() {
-    textZone1.textContent = "Bienvenue dans l'arène Invocateur.";
-    textZone2.textContent = "Veuillez choisir votre combattant.";
-    textZone3.textContent = "";
-    textZone4.textContent = "";
-    imgPlayer1.innerHTML = "";
-    player1Name.textContent = "";
-    player1Name.style.background = "white";
-    imgPlayer2.innerHTML = "";
-    player2Name.textContent = "";
-    player2Name.style.background = "white";
-    confirmation.style.display = "none";
-    removeTextColor(textZone1, textZone2, textZone3, textZone4);
-    selectCharacter();
-  });
-  choiceBtn1.addEventListener("click", function() {
-    removeTextColor(textZone1, textZone2, textZone3, textZone4);
-    confirmation.style.display = "none";
-    portraitSection.style.display = "none";
-    textZone3.textContent = "....Combattez !"
-    textZone4.textContent = "";
-    mainScreen.style.backgroundImage = "url(../assets/img/backgrounds/bg_cbt_dragon_01.gif)";
-    mainScreen.style.backgroundRepeat = "no-repeat";
-    mainScreen.style.backgroundSize = "cover";
-    mainScreen.style.backgroundPosition = "center";
-    actionsButtonsSection.style.display = "block";
-    characterZoneContainer.style.display = "flex";
-    initializingBattle();
-  });
-};
+// function validatorChoice(choiceBtn1, choiceBtn2) {
+//   choiceBtn2.addEventListener("click", function() {
+//     textZone1.textContent = "Bienvenue dans l'arène Invocateur.";
+//     textZone2.textContent = "Veuillez choisir votre combattant.";
+//     textZone3.textContent = "";
+//     textZone4.textContent = "";
+//     imgPlayer1.innerHTML = "";
+//     player1Name.textContent = "";
+//     player1Name.style.background = "white";
+//     imgPlayer2.innerHTML = "";
+//     player2Name.textContent = "";
+//     player2Name.style.background = "white";
+//     confirmation.style.display = "none";
+//     removeTextColor(textZone1, textZone2, textZone3, textZone4);
+//     selectCharacter();
+//   });
+//   choiceBtn1.addEventListener("click", function() {
+//     removeTextColor(textZone1, textZone2, textZone3, textZone4);
+//     confirmation.style.display = "none";
+//     portraitSection.style.display = "none";
+//     textZone3.textContent = "....Combattez !"
+//     textZone4.textContent = "";
+//     mainScreen.style.backgroundImage = "url(../assets/img/backgrounds/bg_cbt_dragon_01.gif)";
+//     mainScreen.style.backgroundRepeat = "no-repeat";
+//     mainScreen.style.backgroundSize = "cover";
+//     mainScreen.style.backgroundPosition = "center";
+//     actionsButtonsSection.style.display = "block";
+//     characterZoneContainer.style.display = "flex";
+//     initializingBattle();
+//   });
+// };
 
 
-selectCharacter();
+// selectCharacter();
 
 
 
