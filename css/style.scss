@@ -1,7 +1,6 @@
 html {
   padding: 0px;
   margin: 0px;
-  // border:10px solid yellow;
   background:rgb(186, 222, 236);
   height: 100vh;
   span {
@@ -547,6 +546,71 @@ body, h1, h2, h3, p, ul, li {
 //         COMBAT HTML        //  //         COMBAT HTML        //
 //----------------------------//  //----------------------------//
 
+#body-combat {
+  // background-image: url('../assets/img/backgrounds/sframe_vertical.png');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+  border: 20px solid rgb(255, 208, 0);
+  -webkit-box-shadow: 0px 0px 0px 5px #00ffff, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 15px 5px rgba(0,0,0,0);
+  box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+//----------------------------//
+//            MENU            //
+//----------------------------//
+
+.cb-mainMenu {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  #cb-arcade {
+    background-image: linear-gradient(to right, gold, #69189E), linear-gradient(to right, gold, #69189E);
+  }
+  h2 {
+    width: 250px;
+    text-align: center;
+    font-family: 'Honk', system-ui;
+    font-size: 50px;
+    margin: 10px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    border: 5px solid transparent;
+    background-image: linear-gradient(to right, #69189E, #69189E), linear-gradient(to right, #69189E, #69189E);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+    -webkit-box-shadow: 0px 0px 0px 5px lightblue, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 8px 6px 50px 11px rgba(255,255,255,0);
+    box-shadow: 0px 0px 0px 5px lightblue, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 8px 6px 50px 11px rgba(255,255,255,0);
+    transition: margin-left 330ms ease-in-out;
+    &:hover {
+      background-image: linear-gradient(to right, gold, #69189E), linear-gradient(to right, gold, #69189E)
+    }
+  }
+  .cb-game-title {
+    font-family: 'Honk', system-ui;
+    font-size: 30px;
+    text-align: center;
+  }
+  .text-zone-container {
+    border: 4px solid white;
+    border-radius: 5px;
+    background: rgb(94, 94, 92);
+    width: 550px;
+    height: 50px;
+    margin: 10px auto 20px auto;
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+
+
+
+
+
+
+
 
 .screen-player-selector {
   width: 100vw;
@@ -574,6 +638,7 @@ body, h1, h2, h3, p, ul, li {
     display :flex;
     align-items: center;
     justify-content: center;
+    border-bottom : 3px solid white;
     img {
       border: 3px solid white;
       border-bottom-right-radius: 40px;
@@ -598,6 +663,7 @@ body, h1, h2, h3, p, ul, li {
   }
   .player-stats-wrapper {
     font-size: 20px;
+
     .player-stats {
       margin: 10px 0px;
       display : flex;
@@ -606,25 +672,32 @@ body, h1, h2, h3, p, ul, li {
         display : flex;
         flex-direction: column;
         align-items: center;
-        margin-right: 30px;
+        margin-right: 20px;
       }
       img {
         width: 50px;
       }
+      .spe-img {
+        img {
+          width: 50px;
+        }
+      }
       .str-gauge-bg,.mag-gauge-bg,.def-gauge-bg {
         width:330px;
         height:40px;
-        border:5px solid black;
-        background: lightgoldenrodyellow;
+        border:8px solid black;
+        background: #FFFA4F;
+        background: -moz-linear-gradient(top, #FFFA4F 0%, #EBE9BC 50%, #EBBB59 100%);
+        background: -webkit-linear-gradient(top, #FFFA4F 0%, #EBE9BC 50%, #EBBB59 100%);
+        background: linear-gradient(to bottom, #FFFA4F 0%, #EBE9BC 50%, #EBBB59 100%);
+
+
+
         .str-gauge,.mag-gauge,.def-gauge {
           width: 330px;
-          display : flex;
-          align-items: center;
-          justify-content: left;
           -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, 5px 5px 15px 5px rgba(0,0,0,0);
           box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, 5px 5px 15px 5px rgba(0,0,0,0);
           .gauge-fill {
-            width : 50px;
             height: 40px;
             margin-right: 40px;
             background: #26A0CE;
@@ -636,7 +709,36 @@ body, h1, h2, h3, p, ul, li {
       }
       .spe-gauge {
         font-size: 24px;
+
       }
+    }
+  }
+  .selector{
+    display: flex;
+    justify-content: space-around;
+
+    .selector-yes{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 100px;
+      background-image: url("../assets/img/elements/btn_yes.png");
+      background-position:center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      &:hover {}
+    }
+    .selector-no {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 100px;
+      background-image: url("../assets/img/elements/btn_no.png");
+      background-position:center;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 }
@@ -648,20 +750,27 @@ body, h1, h2, h3, p, ul, li {
 
 
 .testbody {
-  height: 700px;
+  height: 100vh;
   margin: 0;
-  // display: flex;
   text-align: center;
   grid-template-rows: 800px 100px;
   grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
   align-items: center;
   justify-items: center;
+  .radio-wrapper {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 250px;
+    margin: 0 auto;
+    background-image: url("../assets/img/elements/btn_normal.png");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
-// input {
-//   position:relative;
-//   top:200px;
-//   margin-bottom: 250px;
-// }
+
 main#carousel {
   margin: 20px 0;
   grid-row: 1 / 2;
@@ -685,7 +794,7 @@ div.card {
 
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
-  transition: all 0.25s linear;
+  transition: all 330ms linear;
   transform: rotateY(calc(-10deg * var(--r)))
     translateX(calc(-300px * var(--r)));
   z-index: calc((var(--position) - var(--abs)));
@@ -706,10 +815,25 @@ div.card:nth-of-type(4) {
 div.card:nth-of-type(5) {
   --offset: 5;
 }
+div.card:nth-of-type(6) {
+  --offset: 6;
+}
+div.card:nth-of-type(7) {
+  --offset: 7;
+}
+div.card:nth-of-type(8) {
+  --offset: 8;
+}
+div.card:nth-of-type(9) {
+  --offset: 9;
+}
+
 
 input:nth-of-type(1) {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+
+
 }
 input:nth-of-type(1):checked ~ main#carousel {
   --position: 1;
@@ -745,4 +869,60 @@ input:nth-of-type(5) {
 }
 input:nth-of-type(5):checked ~ main#carousel {
   --position: 5;
+}
+
+input:nth-of-type(6) {
+  grid-column: 7 / 8;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(6):checked ~ main#carousel {
+  --position: 6;
+}
+
+input:nth-of-type(7) {
+  grid-column: 8 / 9;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(7):checked ~ main#carousel {
+  --position: 7;
+}
+
+input:nth-of-type(8) {
+  grid-column: 9 / 10;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(8):checked ~ main#carousel {
+  --position: 8;
+}
+
+input:nth-of-type(9) {
+  grid-column: 10 / 11;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(9):checked ~ main#carousel {
+  --position: 9;
+}
+// input[type="radio"] {
+//   width: 80px;
+//   height: 80px;
+
+// }
+
+.radio-hidden {
+  display: none; /* Cache les boutons radio */
+}
+
+.radio-avatar {
+  display: inline-block;
+  width: 80px; /* Largeur du faux bouton radio */
+  height: 80px; /* Hauteur du faux bouton radio */
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: 5px solid transparent;
+  margin: 20px;
+}
+
+.radio-hidden:checked + .radio-avatar {
+  border-color: rgb(255, 221, 0); /* Change la couleur de la bordure lors de la sélection */
 }

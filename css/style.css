@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   padding: 0px;
   margin: 0px;
@@ -464,6 +465,53 @@ body, h1, h2, h3, p, ul, li {
   background-image: linear-gradient(to right, gold, #69189E), linear-gradient(to right, gold, #69189E);
 }
 
+#body-combat {
+  border: 20px solid rgb(255, 208, 0);
+  box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.cb-mainMenu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cb-mainMenu #cb-arcade {
+  background-image: linear-gradient(to right, gold, #69189E), linear-gradient(to right, gold, #69189E);
+}
+.cb-mainMenu h2 {
+  width: 250px;
+  text-align: center;
+  font-family: "Honk", system-ui;
+  font-size: 50px;
+  margin: 10px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border: 5px solid transparent;
+  background-image: linear-gradient(to right, #69189E, #69189E), linear-gradient(to right, #69189E, #69189E);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0px 0px 0px 5px lightblue, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 8px 6px 50px 11px rgba(255, 255, 255, 0);
+  transition: margin-left 330ms ease-in-out;
+}
+.cb-mainMenu h2:hover {
+  background-image: linear-gradient(to right, gold, #69189E), linear-gradient(to right, gold, #69189E);
+}
+.cb-mainMenu .cb-game-title {
+  font-family: "Honk", system-ui;
+  font-size: 30px;
+  text-align: center;
+}
+.cb-mainMenu .text-zone-container {
+  border: 4px solid white;
+  border-radius: 5px;
+  background: rgb(94, 94, 92);
+  width: 550px;
+  height: 50px;
+  margin: 10px auto 20px auto;
+  padding: 10px;
+  font-size: 20px;
+}
+
 .screen-player-selector {
   width: 100vw;
   display: flex;
@@ -488,6 +536,7 @@ body, h1, h2, h3, p, ul, li {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 3px solid white;
 }
 .card .player-infos img {
   border: 3px solid white;
@@ -521,26 +570,26 @@ body, h1, h2, h3, p, ul, li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 .card .player-stats-wrapper .player-stats img {
+  width: 50px;
+}
+.card .player-stats-wrapper .player-stats .spe-img img {
   width: 50px;
 }
 .card .player-stats-wrapper .player-stats .str-gauge-bg, .card .player-stats-wrapper .player-stats .mag-gauge-bg, .card .player-stats-wrapper .player-stats .def-gauge-bg {
   width: 330px;
   height: 40px;
-  border: 5px solid black;
-  background: lightgoldenrodyellow;
+  border: 8px solid black;
+  background: #FFFA4F;
+  background: linear-gradient(to bottom, #FFFA4F 0%, #EBE9BC 50%, #EBBB59 100%);
 }
 .card .player-stats-wrapper .player-stats .str-gauge-bg .str-gauge, .card .player-stats-wrapper .player-stats .str-gauge-bg .mag-gauge, .card .player-stats-wrapper .player-stats .str-gauge-bg .def-gauge, .card .player-stats-wrapper .player-stats .mag-gauge-bg .str-gauge, .card .player-stats-wrapper .player-stats .mag-gauge-bg .mag-gauge, .card .player-stats-wrapper .player-stats .mag-gauge-bg .def-gauge, .card .player-stats-wrapper .player-stats .def-gauge-bg .str-gauge, .card .player-stats-wrapper .player-stats .def-gauge-bg .mag-gauge, .card .player-stats-wrapper .player-stats .def-gauge-bg .def-gauge {
   width: 330px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
   box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 .card .player-stats-wrapper .player-stats .str-gauge-bg .str-gauge .gauge-fill, .card .player-stats-wrapper .player-stats .str-gauge-bg .mag-gauge .gauge-fill, .card .player-stats-wrapper .player-stats .str-gauge-bg .def-gauge .gauge-fill, .card .player-stats-wrapper .player-stats .mag-gauge-bg .str-gauge .gauge-fill, .card .player-stats-wrapper .player-stats .mag-gauge-bg .mag-gauge .gauge-fill, .card .player-stats-wrapper .player-stats .mag-gauge-bg .def-gauge .gauge-fill, .card .player-stats-wrapper .player-stats .def-gauge-bg .str-gauge .gauge-fill, .card .player-stats-wrapper .player-stats .def-gauge-bg .mag-gauge .gauge-fill, .card .player-stats-wrapper .player-stats .def-gauge-bg .def-gauge .gauge-fill {
-  width: 50px;
   height: 40px;
   margin-right: 40px;
   background: #26A0CE;
@@ -549,19 +598,57 @@ body, h1, h2, h3, p, ul, li {
 .card .player-stats-wrapper .player-stats .spe-gauge {
   font-size: 24px;
 }
+.card .selector {
+  display: flex;
+  justify-content: space-around;
+}
+.card .selector .selector-yes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100px;
+  background-image: url("../assets/img/elements/btn_yes.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.card .selector .selector-no {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100px;
+  background-image: url("../assets/img/elements/btn_no.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 .arrow img {
   width: 70px;
 }
 
 .testbody {
-  height: 700px;
+  height: 100vh;
   margin: 0;
   text-align: center;
   grid-template-rows: 800px 100px;
   grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
   align-items: center;
   justify-items: center;
+}
+.testbody .radio-wrapper {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 250px;
+  margin: 0 auto;
+  background-image: url("../assets/img/elements/btn_normal.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 main#carousel {
@@ -586,7 +673,7 @@ div.card {
   position: absolute;
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
-  transition: all 0.25s linear;
+  transition: all 330ms linear;
   transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
   z-index: calc(var(--position) - var(--abs));
 }
@@ -609,6 +696,22 @@ div.card:nth-of-type(4) {
 
 div.card:nth-of-type(5) {
   --offset: 5;
+}
+
+div.card:nth-of-type(6) {
+  --offset: 6;
+}
+
+div.card:nth-of-type(7) {
+  --offset: 7;
+}
+
+div.card:nth-of-type(8) {
+  --offset: 8;
+}
+
+div.card:nth-of-type(9) {
+  --offset: 9;
 }
 
 input:nth-of-type(1) {
@@ -654,4 +757,59 @@ input:nth-of-type(5) {
 
 input:nth-of-type(5):checked ~ main#carousel {
   --position: 5;
+}
+
+input:nth-of-type(6) {
+  grid-column: 7/8;
+  grid-row: 2/3;
+}
+
+input:nth-of-type(6):checked ~ main#carousel {
+  --position: 6;
+}
+
+input:nth-of-type(7) {
+  grid-column: 8/9;
+  grid-row: 2/3;
+}
+
+input:nth-of-type(7):checked ~ main#carousel {
+  --position: 7;
+}
+
+input:nth-of-type(8) {
+  grid-column: 9/10;
+  grid-row: 2/3;
+}
+
+input:nth-of-type(8):checked ~ main#carousel {
+  --position: 8;
+}
+
+input:nth-of-type(9) {
+  grid-column: 10/11;
+  grid-row: 2/3;
+}
+
+input:nth-of-type(9):checked ~ main#carousel {
+  --position: 9;
+}
+
+.radio-hidden {
+  display: none; /* Cache les boutons radio */
+}
+
+.radio-avatar {
+  display: inline-block;
+  width: 80px; /* Largeur du faux bouton radio */
+  height: 80px; /* Hauteur du faux bouton radio */
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: 5px solid transparent;
+  margin: 20px;
+}
+
+.radio-hidden:checked + .radio-avatar {
+  border-color: rgb(255, 221, 0); /* Change la couleur de la bordure lors de la sélection */
 }/*# sourceMappingURL=style.css.map */

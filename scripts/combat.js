@@ -39,19 +39,21 @@ const mainMenu = document.querySelector(".mainMenu");
 
 const playerSelectorSection = document.querySelector(".cb-player-portrait");
 const cards = document.querySelectorAll(".card");
-
+const jaugesStats = document.querySelectorAll(".gauge-fill");
 
 const characters = {
   char0: {
     name: "Crystal Mauler",
     portrait: "crystal_mauler.png",
-    story: "Un titan des montagnes de cristal, incarne la force brute et une résistance inébranlable.",
+    story: "Un titans des montagnes de cristal, incarne la force brute et une résistance inébranlable.",
     id: 0,
-    atk: 2,
+    stats: {
+        atk: 2,
+        mag: 1,
+        def: 3,
+    },
     atk_img: "assets/img/stats_img/cm_atk.png",
-    mag: 1,
     mag_img: "assets/img/stats_img/cm_mag.png",
-    def: 3,
     def_img: "assets/img/stats_img/cm_def.png",
     special: "Crystal Counter",
     spe_img: "assets/img/skill_img/Crystal Counter.png",
@@ -59,13 +61,15 @@ const characters = {
   char1: {
     name: "Fire Knight",
     portrait: "fire_knight.png",
-    story: "Un titan des montagnes de cristal, incarne la force brute et une résistance inébranlable.",
+    story: "Un chevalier du feu, maîtrise la puissance des flammes pour défaire ses ennemis et défendre son royaume.",
     id: 1,
-    atk: 2,
+    stats: {
+      atk: 2,
+      mag: 2,
+      def: 2,
+    },
     atk_img: "assets/img/stats_img/fk_atk.png",
-    mag: 2,
     mag_img: "assets/img/stats_img/fk_mag.png",
-    def: 2,
     def_img: "assets/img/stats_img/fk_def.png",
     special: "Triple Fire Slash",
     spe_img: "assets/img/skill_img/Triple Fire Slash.png",
@@ -73,13 +77,15 @@ const characters = {
   char2: {
     name: "Metal Bladekeeper",
     portrait: "metal_bladekeeper.png",
-    story: "Une guerrière farouche, qui ne quitte jamais ses épées, même lorsqu'elle dort.",
+    story: "Une voleuse recherchée dans le royaume et qui vend ses services aux plus offrants.",
     id: 2,
+    stats: {
     atk: 4,
-    atk_img: "assets/img/stats_img/mb_atk.png",
     mag: 1,
-    mag_img: "assets/img/stats_img/mb_mag.png",
     def: 1,
+    },
+    atk_img: "assets/img/stats_img/mb_atk.png",
+    mag_img: "assets/img/stats_img/mb_mag.png",
     def_img: "assets/img/stats_img/mb_def.png",
     special: "Howling Fangs",
     spe_img: "assets/img/skill_img/Howling Fangs.png",
@@ -87,13 +93,15 @@ const characters = {
   char3: {
     name: "Leaf Ranger",
     portrait: "leaf_ranger.png",
-    story: "Un elfe sylvain venant de la forêt Nergalisvel. Il apprécie toute fois la compagnie des humains.",
+    story: "Un ranger de Nervalis'tel qui se fond dans la nature pour traquer ses proies et préserver l'équilibre de la forêt.",
     id: 3,
+    stats: {
     atk: 3,
-    atk_img: "assets/img/stats_img/lr_atk.png",
     mag: 2,
-    mag_img: "assets/img/stats_img/lr_mag.png",
     def: 1,
+    },
+    atk_img: "assets/img/stats_img/lr_atk.png",
+    mag_img: "assets/img/stats_img/lr_mag.png",
     def_img: "assets/img/stats_img/lr_def.png",
     special: "Enery Arrow",
     spe_img: "assets/img/skill_img/Energy Arrow.png",
@@ -101,18 +109,85 @@ const characters = {
   char4: {
     name: "Water Priestess",
     portrait: "water_priestess.png",
-    story: "Un titan des montagnes de cristal, incarne la force brute et une résistance inébranlable.",
+    story: "Une prêtresse de l'eau, soigne les âmes blessées et purifie les eaux troubles de son sanctuaire sacré.",
     id: 4,
+    stats: {
     atk: 1,
-    atk_img: "assets/img/stats_img/wp_atk.png",
     mag: 4,
-    mag_img: "assets/img/stats_img/wp_mag.png",
     def: 2,
+    },
+    atk_img: "assets/img/stats_img/wp_atk.png",
+    mag_img: "assets/img/stats_img/wp_mag.png",
     def_img: "assets/img/stats_img/wp_def.png",
     special: "Abyssal Terror",
     spe_img: "assets/img/skill_img/Abyssal Terror.png",
+  },
+  char5: {
+    name: "Wind Hashashin",
+    portrait: "wind_hashashin.png",
+    story: "Un hashashin du vent, se déplace comme une brise silencieuse pour éliminer ses cibles avec précision.",
+    id: 5,
+    stats: {
+    atk: 3,
+    mag: 1,
+    def: 2,
+    },
+    atk_img: "assets/img/stats_img/wp_atk.png",
+    mag_img: "assets/img/stats_img/wp_mag.png",
+    def_img: "assets/img/stats_img/wp_def.png",
+    special: "Blood Slash",
+    spe_img: "assets/img/skill_img/Blood Slash.png"
+  },
+  char6: {
+    name: "Spear Guard",
+    portrait: "spearwoman.png",
+    story: "Un garde-lance, défend son peuple avec une lance acérée et une détermination inébranlable.",
+    id: 6,
+    stats: {
+    atk: 5,
+    mag: 0,
+    def: 1,
+    },
+    atk_img: "assets/img/stats_img/mb_atk.png",
+    mag_img: "assets/img/stats_img/mb_mag.png",
+    def_img: "assets/img/stats_img/mb_def.png",
+    special: "Crescent Moon",
+    spe_img: "assets/img/skill_img/Crescent Moon.png"
+  },
+  char7: {
+    name: "The Vagabond",
+    portrait: "fire_warrior.png",
+    story: "Un vagabond errant, cherche la vérité dans les terres désolées et les ruines oubliées.",
+    id: 7,
+    stats: {
+    atk: 3,
+    mag: 1,
+    def: 2,
+    },
+    atk_img: "assets/img/stats_img/wp_atk.png",
+    mag_img: "assets/img/stats_img/wp_mag.png",
+    def_img: "assets/img/stats_img/wp_def.png",
+    special: "Critical Strike",
+    spe_img: "assets/img/skill_img/Critical Strike.png"
+  },
+  char8: {
+    name: "Earth Monk",
+    portrait: "ground_monk.png",
+    story: "Un moine de la terre, médite dans les montagnes pour atteindre l'harmonie avec la nature.",
+    id: 8,
+    stats: {
+    atk: 3,
+    mag: 3,
+    def: 2,
+    },
+    atk_img: "assets/img/stats_img/gm_atk.png",
+    mag_img: "assets/img/stats_img/gm_mag.png",
+    def_img: "assets/img/stats_img/gm_def.png",
+    special: "The Six Fists Of Heaven",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
   }
 };
+
 
 const bgm = {
   mainScreen: {
@@ -234,6 +309,10 @@ function displayCards() {
               <span>${characters[`char${i}`].special}</span>
             </div>
           </div>
+            <div class="selector">
+            <span class="selector-no">Retour</span>
+              <span class="selector-yes">Choisir</span>
+            </div>
           </div>`;
       }
     }
@@ -250,7 +329,7 @@ function arrows() {
       if (id == "left-arrow") {
 
       } else {
-        
+
       }
     });
   });
@@ -548,7 +627,40 @@ function selectCharacter() {
 // selectCharacter();
 
 
+function displayStats(obj) {
+  let valeurUn = 66;
+  const gaugeStrContainers = document.querySelectorAll(".str-gauge");
+  const gaugeMagContainers = document.querySelectorAll(".mag-gauge");
+  const gaugeDefContainers = document.querySelectorAll(".def-gauge");
 
+  for (i = 0; i < gaugeStrContainers.length; i++) {
+    const gaugeStr = gaugeStrContainers[i];
+    if (characters[`char${i}`]) {
+      console.log("C")
+      const jaugeStr = `${valeurUn}`*`${characters[`char${i}`].stats.atk}`;
+      gaugeStr.firstElementChild.style.width =`${jaugeStr}px`;
+    }
+  }
+  for (i = 0; i < gaugeMagContainers.length; i++) {
+    const gaugeMag = gaugeMagContainers[i];
+    if (characters[`char${i}`]) {
+      console.log("C")
+      const jaugeMag = `${valeurUn}`*`${characters[`char${i}`].stats.mag}`;
+      gaugeMag.firstElementChild.style.width =`${jaugeMag}px`;
+    }
+  }
+  for (i = 0; i < gaugeDefContainers.length; i++) {
+    const gaugeDef = gaugeDefContainers[i];
+    if (characters[`char${i}`]) {
+      console.log("C")
+      const jaugeDef = `${valeurUn}`*`${characters[`char${i}`].stats.def}`;
+      gaugeDef.firstElementChild.style.width =`${jaugeDef}px`;
+    }
+  }
+
+};
+
+displayStats(characters);
 
 function playSound(soundElement){
   const soundToPlay = `<audio id="audioPlay" src="assets/bgm/${soundElement}" preload="auto" hidden></audio>`;

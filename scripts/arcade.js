@@ -82,6 +82,42 @@ const characters = {
     mag: 4,
     def: 1,
     special: "Abyssal Bubble"
+  },
+  char5: {
+    name: "Wind Hashashin",
+    portrait: "wind_hashashin.png",
+    id: 5,
+    atk: 3,
+    mag: 1,
+    def: 2,
+    special: "Sandstorm"
+  },
+  char6: {
+    name: "Spear Guard",
+    portrait: "spearwoman.png",
+    id: 6,
+    atk: 4,
+    mag: 0,
+    def: 2,
+    special: "Crescent Moon"
+  },
+  char7: {
+    name: "The Vagabond",
+    portrait: "fire_warrior.png",
+    id: 7,
+    atk: 3,
+    mag: 0,
+    def: 3,
+    special: "Critical Strike"
+  },
+  char8: {
+    name: "Earth Monk",
+    portrait: "ground_monk.png",
+    id: 8,
+    atk: 3,
+    mag: 3,
+    def: 3,
+    special: "The nine fist of heaven"
   }
 };
 
