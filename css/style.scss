@@ -560,6 +560,10 @@ body, h1, h2, h3, p, ul, li {
 //            MENU            //
 //----------------------------//
 
+#cb-html {
+  overflow-x: hidden;
+}
+
 .cb-mainMenu {
   display:flex;
   justify-content: space-around;
@@ -605,12 +609,9 @@ body, h1, h2, h3, p, ul, li {
   }
 }
 
-
-
-
-
-
-
+//----------------------------//
+//            CARDS           //
+//----------------------------//
 
 .screen-player-selector {
   width: 100vw;
@@ -619,26 +620,24 @@ body, h1, h2, h3, p, ul, li {
   align-items: center;
   overflow: hidden;
 }
-// .combat-player_selector-container {
 
-// }
 
 .card {
-  width: 420px;
-  height: 550px;
+  width: 350px;
+  height: 450px;
   margin: 10px;
   font-family: 'Nova Square', sans-serif;
   background-image: url("../assets/img/backgrounds/gold_frame_vertical2.png");
   background-repeat: no-repeat;
   background-size: contain;
-  padding:30px 40px;
+  padding:20px 30px 20px 30px;
   color: white;
   text-shadow: 1px 2px 2px #020b0d;
   .player-infos {
     display :flex;
     align-items: center;
     justify-content: center;
-    border-bottom : 3px solid white;
+    margin: 0 10px;
     img {
       border: 3px solid white;
       border-bottom-right-radius: 40px;
@@ -648,19 +647,40 @@ body, h1, h2, h3, p, ul, li {
 
     }
     .player-infos-wrapper {
-      height: 150px;
+      height: 130px;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+      text-align: right;
       .player-infos-name {
-        font-size: 26px;
+        font-size: 22px;
         font-weight: bold;
       }
       .player-infos-story {
-        font-size: 18px;
+        font-size: 16px;
+        text-align: right;
+
+
       }
     }
   }
+  .stats-bar {
+    width : 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bar {
+    width: 36%;
+    border-bottom : 3px solid white;
+  }
+  .stats {
+    width: 22%;
+    span {
+      font-size: 16px;
+    }
+  }
+
   .player-stats-wrapper {
     font-size: 20px;
 
@@ -675,7 +695,7 @@ body, h1, h2, h3, p, ul, li {
         margin-right: 20px;
       }
       img {
-        width: 50px;
+        width: 40px;
       }
       .spe-img {
         img {
@@ -683,8 +703,8 @@ body, h1, h2, h3, p, ul, li {
         }
       }
       .str-gauge-bg,.mag-gauge-bg,.def-gauge-bg {
-        width:330px;
-        height:40px;
+        width:250px;
+        height:20px;
         border:8px solid black;
         background: #FFFA4F;
         background: -moz-linear-gradient(top, #FFFA4F 0%, #EBE9BC 50%, #EBBB59 100%);
@@ -694,11 +714,11 @@ body, h1, h2, h3, p, ul, li {
 
 
         .str-gauge,.mag-gauge,.def-gauge {
-          width: 330px;
+          width: 250px;
           -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, 5px 5px 15px 5px rgba(0,0,0,0);
           box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, 5px 5px 15px 5px rgba(0,0,0,0);
           .gauge-fill {
-            height: 40px;
+            height: 20px;
             margin-right: 40px;
             background: #26A0CE;
             background: -moz-linear-gradient(top, #26A0CE 0%, #185054 50%, #29AFC5 100%);
@@ -708,7 +728,7 @@ body, h1, h2, h3, p, ul, li {
         }
       }
       .spe-gauge {
-        font-size: 24px;
+        font-size: 22px;
 
       }
     }
@@ -753,36 +773,24 @@ body, h1, h2, h3, p, ul, li {
   height: 100vh;
   margin: 0;
   text-align: center;
-  grid-template-rows: 800px 100px;
-  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
-  align-items: center;
-  justify-items: center;
-  .radio-wrapper {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    height: 70px;
-    width: 250px;
-    margin: 0 auto;
-    background-image: url("../assets/img/elements/btn_normal.png");
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+  // grid-template-rows: 800px 100px;
+  // grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+  // align-items: center;
+  // justify-items: center;
 }
 
 main#carousel {
-  margin: 20px 0;
+  margin: 20px auto;
   grid-row: 1 / 2;
   grid-column: 1 / 8;
   width: 100vw;
-  height: 600px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   transform-style: preserve-3d;
-  perspective: 500px;
+  perspective: 100px;
   --items: 5;
   --middle: 3;
   --position: 1;
@@ -795,8 +803,8 @@ div.card {
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
   transition: all 330ms linear;
-  transform: rotateY(calc(-10deg * var(--r)))
-    translateX(calc(-300px * var(--r)));
+  transform: rotateY(calc(-5deg * var(--r)))
+    translateX(calc(-400px * var(--r)));
   z-index: calc((var(--position) - var(--abs)));
 }
 
@@ -827,8 +835,57 @@ div.card:nth-of-type(8) {
 div.card:nth-of-type(9) {
   --offset: 9;
 }
+div.card:nth-of-type(10) {
+  --offset: 10;
+}
+div.card:nth-of-type(11) {
+  --offset: 11;
+}
+div.card:nth-of-type(12) {
+  --offset: 12;
+}
+
+div.card:nth-of-type(13) {
+  --offset: 13;
+}
+
+div.card:nth-of-type(14) {
+  --offset: 14;
+}
+
+div.card:nth-of-type(15) {
+  --offset: 15;
+}
+
+div.card:nth-of-type(16) {
+  --offset: 16;
+}
+
+div.card:nth-of-type(17) {
+  --offset: 17;
+}
 
 
+div.card:nth-of-type(18) {
+  --offset: 18;
+}
+
+div.card:nth-of-type(19) {
+  --offset: 19;
+}
+
+div.card:nth-of-type(20) {
+  --offset: 20;
+}
+
+
+div.card:nth-of-type(21) {
+  --offset: 21;
+}
+
+div.card:nth-of-type(22) {
+  --offset: 22;
+}
 input:nth-of-type(1) {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
@@ -902,11 +959,111 @@ input:nth-of-type(9) {
 input:nth-of-type(9):checked ~ main#carousel {
   --position: 9;
 }
-// input[type="radio"] {
-//   width: 80px;
-//   height: 80px;
 
-// }
+input:nth-of-type(10) {
+  grid-column: 11 / 12;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(10):checked ~ main#carousel {
+  --position: 10;
+}
+
+input:nth-of-type(11) {
+  grid-column: 11 / 12;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(11):checked ~ main#carousel {
+  --position: 11;
+}
+
+input:nth-of-type(12) {
+  grid-column: 12 / 13;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(12):checked ~ main#carousel {
+  --position: 12;
+}
+
+input:nth-of-type(13) {
+  grid-column: 13 / 14;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(13):checked ~ main#carousel {
+  --position: 13;
+}
+
+input:nth-of-type(14) {
+  grid-column: 14 / 15;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(14):checked ~ main#carousel {
+  --position: 14;
+}
+
+input:nth-of-type(15) {
+  grid-column: 15 / 16;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(15):checked ~ main#carousel {
+  --position: 15;
+}
+
+input:nth-of-type(16) {
+  grid-column: 16 / 17;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(16):checked ~ main#carousel {
+  --position: 16;
+}
+
+input:nth-of-type(17) {
+  grid-column: 17 / 18;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(17):checked ~ main#carousel {
+  --position: 17;
+}
+
+input:nth-of-type(18) {
+  grid-column: 18 / 19;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(18):checked ~ main#carousel {
+  --position: 18;
+}
+
+input:nth-of-type(19) {
+  grid-column: 19 / 20;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(19):checked ~ main#carousel {
+  --position: 19;
+}
+
+input:nth-of-type(20) {
+  grid-column: 20 / 21;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(20):checked ~ main#carousel {
+  --position: 20;
+}
+
+
+input:nth-of-type(21) {
+  grid-column: 21 / 22;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(21):checked ~ main#carousel {
+  --position: 21;
+}
+
+input:nth-of-type(22) {
+  grid-column: 22 / 23;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(22):checked ~ main#carousel {
+  --position: 22;
+}
 
 .radio-hidden {
   display: none; /* Cache les boutons radio */
@@ -914,13 +1071,13 @@ input:nth-of-type(9):checked ~ main#carousel {
 
 .radio-avatar {
   display: inline-block;
-  width: 80px; /* Largeur du faux bouton radio */
-  height: 80px; /* Hauteur du faux bouton radio */
+  width: 60px; /* Largeur du faux bouton radio */
+  height: 60px; /* Hauteur du faux bouton radio */
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
-  border: 5px solid transparent;
-  margin: 20px;
+  border: 5px solid purple;
+  margin: 10px 28px;
 }
 
 .radio-hidden:checked + .radio-avatar {

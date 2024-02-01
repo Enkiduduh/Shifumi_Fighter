@@ -57,7 +57,7 @@ const characters = {
   char1: {
     name: "Fire Knight",
     portrait: "fire_knight.png",
-    story: "Un chevalier du feu, maîtrise la puissance des flammes pour défaire ses ennemis et défendre son royaume.",
+    story: "Un chevalier du feu, maîtrise la puissance des flammes pour défaire ses ennemis.",
     id: 1,
     stats: {
       atk: 2,
@@ -76,9 +76,9 @@ const characters = {
     story: "Une voleuse recherchée dans le royaume et qui vend ses services aux plus offrants.",
     id: 2,
     stats: {
-      atk: 4,
-      mag: 1,
-      def: 1,
+    atk: 4,
+    mag: 1,
+    def: 1,
     },
     atk_img: "assets/img/stats_img/mb_atk.png",
     mag_img: "assets/img/stats_img/mb_mag.png",
@@ -89,12 +89,12 @@ const characters = {
   char3: {
     name: "Leaf Ranger",
     portrait: "leaf_ranger.png",
-    story: "Un ranger de Nervalis'tel qui se fond dans la nature pour traquer ses proies et préserver l'équilibre de la forêt.",
+    story: "Un ranger de Nervalis'tel qui se fond dans la nature pour traquer ses proies.",
     id: 3,
     stats: {
-      atk: 3,
-      mag: 2,
-      def: 1,
+    atk: 3,
+    mag: 2,
+    def: 1,
     },
     atk_img: "assets/img/stats_img/lr_atk.png",
     mag_img: "assets/img/stats_img/lr_mag.png",
@@ -105,7 +105,7 @@ const characters = {
   char4: {
     name: "Water Priestess",
     portrait: "water_priestess.png",
-    story: "Une prêtresse de l'eau, soigne les âmes blessées et purifie les eaux troubles de son sanctuaire sacré.",
+    story: "Une prêtresse de l'eau qui soigne les âmes blessées et purifie les eaux troubles.",
     id: 4,
     stats: {
     atk: 1,
@@ -116,12 +116,12 @@ const characters = {
     mag_img: "assets/img/stats_img/wp_mag.png",
     def_img: "assets/img/stats_img/wp_def.png",
     special: "Abyssal Terror",
-    spe_img: "assets/img/skill_img/Abyssal terror.png",
+    spe_img: "assets/img/skill_img/Abyssal Terror.png",
   },
   char5: {
     name: "Wind Hashashin",
     portrait: "wind_hashashin.png",
-    story: "Un hashashin du vent, se déplace comme une brise silencieuse pour éliminer ses cibles avec précision.",
+    story: "Un hashashin qui se déplace comme une brise silencieuse pour éliminer ses cibles.",
     id: 5,
     stats: {
     atk: 3,
@@ -137,7 +137,7 @@ const characters = {
   char6: {
     name: "Spear Guard",
     portrait: "spearwoman.png",
-    story: "Un garde-lance, défend son peuple avec une lance acérée et une détermination inébranlable.",
+    story: "Un garde-lance qui maîtrise l'art de la lance. Elle adore les duels et ne perd jamais.",
     id: 6,
     stats: {
     atk: 5,
@@ -151,9 +151,9 @@ const characters = {
     spe_img: "assets/img/skill_img/Crescent Moon.png"
   },
   char7: {
-    name: "The Vagabond",
+    name: "The Wanderer",
     portrait: "fire_warrior.png",
-    story: "Un vagabond errant, cherche la vérité dans les terres désolées et les ruines oubliées.",
+    story: "Un vagabond en quête de vérité dans les terres désolées et les ruines oubliées.",
     id: 7,
     stats: {
     atk: 3,
@@ -167,9 +167,9 @@ const characters = {
     spe_img: "assets/img/skill_img/Critical Strike.png"
   },
   char8: {
-    name: "Earth Monk",
+    name: "Moine",
     portrait: "ground_monk.png",
-    story: "Un moine de la terre, médite dans les montagnes pour atteindre l'harmonie avec la nature.",
+    story: "Un moine qui protège le temple de l'Arbre sacré. Il aurait plus de 500 ans.",
     id: 8,
     stats: {
     atk: 3,
@@ -179,7 +179,215 @@ const characters = {
     atk_img: "assets/img/stats_img/gm_atk.png",
     mag_img: "assets/img/stats_img/gm_mag.png",
     def_img: "assets/img/stats_img/gm_def.png",
-    special: "The six fists of heaven",
+    special: "The Six Fists Of Heaven",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char9: {
+    name: "Orc Shaman",
+    portrait: "orc_shaman.png",
+    story: "Un moine qui protège le temple de l'Arbre sacré. Il aurait plus de 500 ans.",
+    id: 9,
+    stats: {
+    atk: 2,
+    mag: 5,
+    def: 2,
+    },
+    atk_img: "assets/img/stats_img/lr_atk.png",
+    mag_img: "assets/img/stats_img/lr_mag.png",
+    def_img: "assets/img/stats_img/lr_def.png",
+    special: "L'Appel Des Esprits Ancestraux",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char10: {
+    name: "Viking Des Fjörds",
+    portrait: "viking.png",
+    story: "Un guerrier brutal qui ne cherche que des adversaires forts. Ne craint pas la mort.",
+    id: 10,
+    stats: {
+    atk: 5,
+    mag: 0,
+    def: 3,
+    },
+    atk_img: "assets/img/stats_img/cm_atk.png",
+    mag_img: "assets/img/stats_img/cm_mag.png",
+    def_img: "assets/img/stats_img/cm_def.png",
+    special: "Crocs De Fenrir",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char11: {
+    name: "Soldat Valkine",
+    portrait: "human_female_02.png",
+    story: "Lieutenant de l'avant garde du royaume de Xor'l. Elle est redoutable au combat.",
+    id: 11,
+    stats: {
+    atk: 4,
+    mag: 1,
+    def: 3,
+    },
+    atk_img: "assets/img/stats_img/gm_atk.png",
+    mag_img: "assets/img/stats_img/gm_mag.png",
+    def_img: "assets/img/stats_img/gm_def.png",
+    special: "Frappe de l'aigle",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char12: {
+    name: "Solyn'Eri",
+    portrait: "Light_elf_female_01.png",
+    story: "Une haute Elfe de l'Arbre sacré. Sa chevelure prouve qu'elle a plus de 1000 ans.",
+    id: 12,
+    stats: {
+    atk: 2,
+    mag: 5,
+    def: 2,
+    },
+    atk_img: "assets/img/stats_img/wp_atk.png",
+    mag_img: "assets/img/stats_img/wp_mag.png",
+    def_img: "assets/img/stats_img/wp_def.png",
+    special: "Transformation Divine",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char13: {
+    name: "Maître Magus",
+    portrait: "human_male_02.png",
+    story: "Un maître de la Tour Grise qui peut manier toutes les formes de magies connues.",
+    id: 13,
+    stats: {
+    atk: 1,
+    mag: 5,
+    def: 4,
+    },
+    atk_img: "assets/img/stats_img/fk_atk.png",
+    mag_img: "assets/img/stats_img/fk_mag.png",
+    def_img: "assets/img/stats_img/fk_def.png",
+    special: "Arcanum Fatalis",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char14: {
+    name: "Blades Dancer",
+    portrait: "human_female_03.png",
+    story: "Assassin, danseuse et magicienne. Elle peut faire face à toute situation.",
+    id: 14,
+    stats: {
+    atk: 4,
+    mag: 3,
+    def: 2,
+    },
+    atk_img: "assets/img/stats_img/lr_atk.png",
+    mag_img: "assets/img/stats_img/lr_mag.png",
+    def_img: "assets/img/stats_img/lr_def.png",
+    special: "Danse-Lames du Soleil",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char15: {
+    name: "Magus Ombral",
+    portrait: "Dark_one_male_04.png",
+    story: "Un ancien Maître Magus qui s'est laissé dévorer par son propre pouvoir.",
+    id: 15,
+    stats: {
+    atk: 0,
+    mag: 4,
+    def: 4,
+    },
+    atk_img: "assets/img/stats_img/wp_atk.png",
+    mag_img: "assets/img/stats_img/wp_mag.png",
+    def_img: "assets/img/stats_img/wp_def.png",
+    special: "Malecus Carnivorae",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char16: {
+    name: "Seigneur Ombral",
+    portrait: "Dark_one_male_01.png",
+    story: "Commandant de l'armée du Magus Ombral. C'est un ancien héro dêchu.",
+    id: 16,
+    stats: {
+    atk: 3,
+    mag: 2,
+    def: 4,
+    },
+    atk_img: "assets/img/stats_img/mb_atk.png",
+    mag_img: "assets/img/stats_img/mb_mag.png",
+    def_img: "assets/img/stats_img/mb_def.png",
+    special: "Déchirement ",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char17: {
+    name: "Princesse de Xor'l",
+    portrait: "human_female_01.png",
+    story: "Les princesses de Xor'l apprennent l'art de la guerre dès leur plus jeune âge.",
+    id: 17,
+    stats: {
+    atk: 2,
+    mag: 1,
+    def: 3,
+    },
+    atk_img: "assets/img/stats_img/gm_atk.png",
+    mag_img: "assets/img/stats_img/gm_mag.png",
+    def_img: "assets/img/stats_img/gm_def.png",
+    special: "Rage de Xor'l",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char18: {
+    name: "Elfe De Terre-Feu",
+    portrait: "Dark_elf_female_01.png",
+    story: "Une des derniers survivants du clan Terre-Feu. Peut invoquer des esprits célestes",
+    id: 18,
+    stats: {
+    atk: 3,
+    mag: 3,
+    def: 2,
+    },
+    atk_img: "assets/img/stats_img/gm_atk.png",
+    mag_img: "assets/img/stats_img/gm_mag.png",
+    def_img: "assets/img/stats_img/gm_def.png",
+    special: "Invocation Des Célestes",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char19: {
+    name: "Seigneur Vampire",
+    portrait: "Dark_one_male_03.png",
+    story: "Une créature qui se nourrit du sang des vivants et peut ensuite les contrôler.",
+    id: 19,
+    stats: {
+    atk: 3,
+    mag: 4,
+    def: 0,
+    },
+    atk_img: "assets/img/stats_img/fk_atk.png",
+    mag_img: "assets/img/stats_img/fk_mag.png",
+    def_img: "assets/img/stats_img/fk_def.png",
+    special: "Pluie Sanguine",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char20: {
+    name: "Guerrière Lione",
+    portrait: "beast_female_01.png",
+    story: "Redoutable chasseuse du peuple des bêtes. Ses griffes transpercent les armures.",
+    id: 20,
+    stats: {
+    atk: 4,
+    mag: 0,
+    def: 3,
+    },
+    atk_img: "assets/img/stats_img/gm_atk.png",
+    mag_img: "assets/img/stats_img/gm_mag.png",
+    def_img: "assets/img/stats_img/gm_def.png",
+    special: "Pluie Sanguine",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char21: {
+    name: "Chevalier Fantôme",
+    portrait: "human_male_04.png",
+    story: "Un ancien chevalier mort dont l'âme ne trouve pas le repos. Il cherche la vérité.",
+    id: 21,
+    stats: {
+    atk: 3,
+    mag: 3,
+    def: 3,
+    },
+    atk_img: "assets/img/stats_img/gm_atk.png",
+    mag_img: "assets/img/stats_img/gm_mag.png",
+    def_img: "assets/img/stats_img/gm_def.png",
+    special: "The Six Fists Of Heaven",
     spe_img: "assets/img/skill_img/Six fists of heaven.png"
   }
 };

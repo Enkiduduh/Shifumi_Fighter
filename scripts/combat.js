@@ -61,7 +61,7 @@ const characters = {
   char1: {
     name: "Fire Knight",
     portrait: "fire_knight.png",
-    story: "Un chevalier du feu, maîtrise la puissance des flammes pour défaire ses ennemis et défendre son royaume.",
+    story: "Un chevalier du feu, maîtrise la puissance des flammes pour défaire ses ennemis.",
     id: 1,
     stats: {
       atk: 2,
@@ -93,7 +93,7 @@ const characters = {
   char3: {
     name: "Leaf Ranger",
     portrait: "leaf_ranger.png",
-    story: "Un ranger de Nervalis'tel qui se fond dans la nature pour traquer ses proies et préserver l'équilibre de la forêt.",
+    story: "Un ranger de Nervalis'tel qui se fond dans la nature pour traquer ses proies.",
     id: 3,
     stats: {
     atk: 3,
@@ -109,7 +109,7 @@ const characters = {
   char4: {
     name: "Water Priestess",
     portrait: "water_priestess.png",
-    story: "Une prêtresse de l'eau, soigne les âmes blessées et purifie les eaux troubles de son sanctuaire sacré.",
+    story: "Une prêtresse de l'eau qui soigne les âmes blessées et purifie les eaux troubles.",
     id: 4,
     stats: {
     atk: 1,
@@ -125,7 +125,7 @@ const characters = {
   char5: {
     name: "Wind Hashashin",
     portrait: "wind_hashashin.png",
-    story: "Un hashashin du vent, se déplace comme une brise silencieuse pour éliminer ses cibles avec précision.",
+    story: "Un hashashin qui se déplace comme une brise silencieuse pour éliminer ses cibles.",
     id: 5,
     stats: {
     atk: 3,
@@ -141,7 +141,7 @@ const characters = {
   char6: {
     name: "Spear Guard",
     portrait: "spearwoman.png",
-    story: "Un garde-lance, défend son peuple avec une lance acérée et une détermination inébranlable.",
+    story: "Un garde-lance qui maîtrise l'art de la lance. Elle adore les duels et ne perd jamais.",
     id: 6,
     stats: {
     atk: 5,
@@ -155,9 +155,9 @@ const characters = {
     spe_img: "assets/img/skill_img/Crescent Moon.png"
   },
   char7: {
-    name: "The Vagabond",
+    name: "The Wanderer",
     portrait: "fire_warrior.png",
-    story: "Un vagabond errant, cherche la vérité dans les terres désolées et les ruines oubliées.",
+    story: "Un vagabond en quête de vérité dans les terres désolées et les ruines oubliées.",
     id: 7,
     stats: {
     atk: 3,
@@ -171,14 +171,222 @@ const characters = {
     spe_img: "assets/img/skill_img/Critical Strike.png"
   },
   char8: {
-    name: "Earth Monk",
+    name: "Moine",
     portrait: "ground_monk.png",
-    story: "Un moine de la terre, médite dans les montagnes pour atteindre l'harmonie avec la nature.",
+    story: "Un moine qui protège le temple de l'Arbre sacré. Il aurait plus de 500 ans.",
     id: 8,
     stats: {
     atk: 3,
     mag: 3,
     def: 2,
+    },
+    atk_img: "assets/img/stats_img/gm_atk.png",
+    mag_img: "assets/img/stats_img/gm_mag.png",
+    def_img: "assets/img/stats_img/gm_def.png",
+    special: "The Six Fists Of Heaven",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char9: {
+    name: "Orc Shaman",
+    portrait: "orc_shaman.png",
+    story: "Un moine qui protège le temple de l'Arbre sacré. Il aurait plus de 500 ans.",
+    id: 9,
+    stats: {
+    atk: 2,
+    mag: 5,
+    def: 2,
+    },
+    atk_img: "assets/img/stats_img/lr_atk.png",
+    mag_img: "assets/img/stats_img/lr_mag.png",
+    def_img: "assets/img/stats_img/lr_def.png",
+    special: "L'Appel Des Esprits Ancestraux",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char10: {
+    name: "Viking Des Fjörds",
+    portrait: "viking.png",
+    story: "Un guerrier brutal qui ne cherche que des adversaires forts. Ne craint pas la mort.",
+    id: 10,
+    stats: {
+    atk: 5,
+    mag: 0,
+    def: 3,
+    },
+    atk_img: "assets/img/stats_img/cm_atk.png",
+    mag_img: "assets/img/stats_img/cm_mag.png",
+    def_img: "assets/img/stats_img/cm_def.png",
+    special: "Crocs De Fenrir",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char11: {
+    name: "Soldat Valkine",
+    portrait: "human_female_02.png",
+    story: "Lieutenant de l'avant garde du royaume de Xor'l. Elle est redoutable au combat.",
+    id: 11,
+    stats: {
+    atk: 4,
+    mag: 1,
+    def: 3,
+    },
+    atk_img: "assets/img/stats_img/gm_atk.png",
+    mag_img: "assets/img/stats_img/gm_mag.png",
+    def_img: "assets/img/stats_img/gm_def.png",
+    special: "Frappe de l'aigle",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char12: {
+    name: "Solyn'Eri",
+    portrait: "Light_elf_female_01.png",
+    story: "Une haute Elfe de l'Arbre sacré. Sa chevelure prouve qu'elle a plus de 1000 ans.",
+    id: 12,
+    stats: {
+    atk: 2,
+    mag: 5,
+    def: 2,
+    },
+    atk_img: "assets/img/stats_img/wp_atk.png",
+    mag_img: "assets/img/stats_img/wp_mag.png",
+    def_img: "assets/img/stats_img/wp_def.png",
+    special: "Transformation Divine",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char13: {
+    name: "Maître Magus",
+    portrait: "human_male_02.png",
+    story: "Un maître de la Tour Grise qui peut manier toutes les formes de magies connues.",
+    id: 13,
+    stats: {
+    atk: 1,
+    mag: 5,
+    def: 4,
+    },
+    atk_img: "assets/img/stats_img/fk_atk.png",
+    mag_img: "assets/img/stats_img/fk_mag.png",
+    def_img: "assets/img/stats_img/fk_def.png",
+    special: "Arcanum Fatalis",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char14: {
+    name: "Blades Dancer",
+    portrait: "human_female_03.png",
+    story: "Assassin, danseuse et magicienne. Elle peut faire face à toute situation.",
+    id: 14,
+    stats: {
+    atk: 4,
+    mag: 3,
+    def: 2,
+    },
+    atk_img: "assets/img/stats_img/lr_atk.png",
+    mag_img: "assets/img/stats_img/lr_mag.png",
+    def_img: "assets/img/stats_img/lr_def.png",
+    special: "Danse-Lames du Soleil",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char15: {
+    name: "Magus Ombral",
+    portrait: "Dark_one_male_04.png",
+    story: "Un ancien Maître Magus qui s'est laissé dévorer par son propre pouvoir.",
+    id: 15,
+    stats: {
+    atk: 0,
+    mag: 4,
+    def: 4,
+    },
+    atk_img: "assets/img/stats_img/wp_atk.png",
+    mag_img: "assets/img/stats_img/wp_mag.png",
+    def_img: "assets/img/stats_img/wp_def.png",
+    special: "Malecus Carnivorae",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char16: {
+    name: "Seigneur Ombral",
+    portrait: "Dark_one_male_01.png",
+    story: "Commandant de l'armée du Magus Ombral. C'est un ancien héro dêchu.",
+    id: 16,
+    stats: {
+    atk: 3,
+    mag: 2,
+    def: 4,
+    },
+    atk_img: "assets/img/stats_img/mb_atk.png",
+    mag_img: "assets/img/stats_img/mb_mag.png",
+    def_img: "assets/img/stats_img/mb_def.png",
+    special: "Déchirement ",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char17: {
+    name: "Princesse de Xor'l",
+    portrait: "human_female_01.png",
+    story: "Les princesses de Xor'l apprennent l'art de la guerre dès leur plus jeune âge.",
+    id: 17,
+    stats: {
+    atk: 2,
+    mag: 1,
+    def: 3,
+    },
+    atk_img: "assets/img/stats_img/gm_atk.png",
+    mag_img: "assets/img/stats_img/gm_mag.png",
+    def_img: "assets/img/stats_img/gm_def.png",
+    special: "Rage de Xor'l",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char18: {
+    name: "Elfe De Terre-Feu",
+    portrait: "Dark_elf_female_01.png",
+    story: "Une des derniers survivants du clan Terre-Feu. Peut invoquer des esprits célestes",
+    id: 18,
+    stats: {
+    atk: 3,
+    mag: 3,
+    def: 2,
+    },
+    atk_img: "assets/img/stats_img/gm_atk.png",
+    mag_img: "assets/img/stats_img/gm_mag.png",
+    def_img: "assets/img/stats_img/gm_def.png",
+    special: "Invocation Des Célestes",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char19: {
+    name: "Seigneur Vampire",
+    portrait: "Dark_one_male_03.png",
+    story: "Une créature qui se nourrit du sang des vivants et peut ensuite les contrôler.",
+    id: 19,
+    stats: {
+    atk: 3,
+    mag: 4,
+    def: 0,
+    },
+    atk_img: "assets/img/stats_img/fk_atk.png",
+    mag_img: "assets/img/stats_img/fk_mag.png",
+    def_img: "assets/img/stats_img/fk_def.png",
+    special: "Pluie Sanguine",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char20: {
+    name: "Guerrière Lione",
+    portrait: "beast_female_01.png",
+    story: "Redoutable chasseuse du peuple des bêtes. Ses griffes transpercent les armures.",
+    id: 20,
+    stats: {
+    atk: 4,
+    mag: 0,
+    def: 3,
+    },
+    atk_img: "assets/img/stats_img/gm_atk.png",
+    mag_img: "assets/img/stats_img/gm_mag.png",
+    def_img: "assets/img/stats_img/gm_def.png",
+    special: "Pluie Sanguine",
+    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+  },
+  char21: {
+    name: "Chevalier Fantôme",
+    portrait: "human_male_04.png",
+    story: "Un ancien chevalier mort dont l'âme ne trouve pas le repos. Il cherche la vérité.",
+    id: 21,
+    stats: {
+    atk: 3,
+    mag: 3,
+    def: 3,
     },
     atk_img: "assets/img/stats_img/gm_atk.png",
     mag_img: "assets/img/stats_img/gm_mag.png",
@@ -266,11 +474,16 @@ function displayCards() {
             <div class="player-infos-story"><p>${characters[`char${i}`].story}</p></div>
           </div>
         </div>
+        <div class="stats-bar">
+          <div class="bar"></div>
+          <div class="stats"><span>Stats</span></div>
+          <div class="bar"></div>
+        </div>
           <div class="player-stats-wrapper">
           <div class="player-stats str">
             <div class="str-img">
               <img src="${characters[`char${i}`].atk_img}" alt="atk icon">
-              <span>STR</span>
+
             </div>
             <div class="str-gauge-bg">
               <div class="str-gauge">
@@ -281,7 +494,7 @@ function displayCards() {
           <div class="player-stats mag">
             <div class="mag-img">
               <img src="${characters[`char${i}`].mag_img}" alt="atk icon">
-              <span>MAG</span>
+
             </div>
             <div class="def-gauge-bg">
               <div class="mag-gauge">
@@ -292,7 +505,7 @@ function displayCards() {
           <div class="player-stats def">
             <div class="def-img">
               <img src="${characters[`char${i}`].def_img}" alt="atk icon">
-              <span>DEF</span>
+
             </div>
             <div class="def-gauge-bg">
               <div class="def-gauge">
@@ -300,24 +513,30 @@ function displayCards() {
               </div>
             </div>
           </div>
+          <div class="stats-bar">
+            <div class="bar"></div>
+            <div class="stats"><span>Skill</span></div>
+            <div class="bar"></div>
+          </div>
           <div class="player-stats spe">
             <div class="spe-img">
               <img src="${characters[`char${i}`].spe_img}" alt="">
-              <span>SKILL</span>
             </div>
             <div class="spe-gauge">
               <span>${characters[`char${i}`].special}</span>
             </div>
           </div>
-            <div class="selector">
-            <span class="selector-no">Retour</span>
-              <span class="selector-yes">Choisir</span>
-            </div>
           </div>`;
       }
     }
   });
 
+
+
+  // <div class="selector">
+  // <span class="selector-no">Retour</span>
+  //   <span class="selector-yes">Choisir</span>
+  // </div>
 
 }
 displayCards();
@@ -347,18 +566,14 @@ function characterChoice(obj) {
 let playerChoice = false;
 
 function selectCharacter() {
-  characterZoneContainer.style.display = "none";
   textZone1.textContent = "Bienvenue dans l'arène Invocateur.";
   textZone2.textContent = "Veuillez choisir votre combattant.";
   characterChoice(characters);
   portraits.forEach(portrait => {
     portrait.addEventListener("click", function() {
-      console.log("hello");
       const charIndex = portrait.firstChild.getAttribute("data-char");
       if (characters[`char${charIndex}`]) {
         const characterName = characters[`char${charIndex}`].name;
-        const random = Math.floor(Math.random() * 5);
-        const randomP2Name = characters[`char${random}`].name;
         let characterPortrait = "";
         if (characterName == "Crystal Mauler") {
           textZone3.style.color = "#85dbf2";
@@ -387,208 +602,19 @@ function selectCharacter() {
           characterPortrait = "water_priestess.png";
         }
 
-        if (randomP2Name == "Crystal Mauler") {
-          textZone4.style.color = "#85dbf2";
-          player2Name.style.background = "#85dbf2";
-
-        } else if (randomP2Name == "Fire Knight") {
-          textZone4.style.color = "#ee692f";
-          player2Name.style.background = "#ee692f";
-
-        } else if (randomP2Name == "Metal Bladekeeper") {
-          textZone4.style.color = "#c3c0c6";
-          player2Name.style.background = "#c3c0c6";
-
-        } else if (randomP2Name == "Leaf Ranger") {
-          textZone4.style.color = "#11eb03";
-          player2Name.style.background = "#11eb03";
-        } else {
-          textZone4.style.color = "#3a8bf9";
-          player2Name.style.background = "#3a8bf9";
-        }
-
-        function characterChoice(obj) {
-            for (i = 0; i < portraits.length; i++) {
-              const portrait = portraits[i];
-              if (characters[`char${i}`]) {
-                portrait.innerHTML = `<img data-char="${i}" src="assets/img/portraits/${characters[`char${i}`].portrait}" alt="beurk">`;
-              }
-            }
-        };
-
-        let playerChoice = false;
-
-        function selectCharacter() {
-          characterZoneContainer.style.display = "none";
-          textZone1.textContent = "Bienvenue dans l'arène Invocateur.";
-          textZone2.textContent = "Veuillez choisir votre combattant.";
-          characterChoice(characters);
-          portraits.forEach(portrait => {
-            portrait.addEventListener("click", function() {
-              console.log("hello");
-              const charIndex = portrait.firstChild.getAttribute("data-char");
-              if (characters[`char${charIndex}`]) {
-                const characterName = characters[`char${charIndex}`].name;
-                const random = Math.floor(Math.random() * 5);
-                const randomP2Name = characters[`char${random}`].name;
-                let characterPortrait = "";
-                if (characterName == "Crystal Mauler") {
-                  textZone3.style.color = "#85dbf2";
-                  player1Name.style.background = "#85dbf2";
-                  playerChoice = true;
-                  characterPortrait = "crystal_mauler.png";
-                } else if (characterName == "Fire Knight") {
-                  textZone3.style.color = "#ee692f";
-                  player1Name.style.background = "#ee692f";
-                  playerChoice = true;
-                  characterPortrait = "fire_knight.png";
-                } else if (characterName == "Metal Bladekeeper") {
-                  textZone3.style.color = "#c3c0c6";
-                  player1Name.style.background = "#c3c0c6";
-                  playerChoice = true;
-                  characterPortrait = "metal_bladekeeper.png";
-                } else if (characterName == "Leaf Ranger") {
-                  textZone3.style.color = "#11eb03";
-                  player1Name.style.background = "#11eb03";
-                  playerChoice = true;
-                  characterPortrait = "leaf_ranger.png";
-                } else {
-                  textZone3.style.color = "#3a8bf9";
-                  player1Name.style.background = "#3a8bf9";
-                  playerChoice = true;
-                  characterPortrait = "water_priestess.png";
-                }
-
-                if (randomP2Name == "Crystal Mauler") {
-                  textZone4.style.color = "#85dbf2";
-                  player2Name.style.background = "#85dbf2";
-
-                } else if (randomP2Name == "Fire Knight") {
-                  textZone4.style.color = "#ee692f";
-                  player2Name.style.background = "#ee692f";
-
-                } else if (randomP2Name == "Metal Bladekeeper") {
-                  textZone4.style.color = "#c3c0c6";
-                  player2Name.style.background = "#c3c0c6";
-
-                } else if (randomP2Name == "Leaf Ranger") {
-                  textZone4.style.color = "#11eb03";
-                  player2Name.style.background = "#11eb03";
-                } else {
-                  textZone4.style.color = "#3a8bf9";
-                  player2Name.style.background = "#3a8bf9";
-                }
-
-                textZone3.textContent = `Vous avez choisi ${characterName}.`;
-                imgPlayer1.innerHTML = `<img src="assets/img/portraits/${characterPortrait}" alt="${characterPortrait}">`;
-                player1Name.style.fontFamily = "Nova Square, sans-serif";
-                player1Name.style.fontWeight = "bold";
-                player1Name.textContent = characterName;
-                confirmation.style.display = "flex";
-                player2Name.textContent = randomP2Name;
-                player2Name.style.fontFamily = "Nova Square, sans-serif";
-                player2Name.style.fontWeight = "bold";
-                imgPlayer2.innerHTML = `<img src="assets/img/portraits/${characters[`char${random}`].portrait}" alt="${characters[`char${random}`].portrait}">`;
-                textZone4.textContent = `Votre adversaire a choisi ${randomP2Name}.`;
-
-              }
-            });
-          });
-          validatorChoice(yesBtn, noBtn)
-        };
-
-
-        // function validatorChoice(choiceBtn1, choiceBtn2) {
-        //   choiceBtn2.addEventListener("click", function() {
-        //     textZone1.textContent = "Bienvenue dans l'arène Invocateur.";
-        //     textZone2.textContent = "Veuillez choisir votre combattant.";
-        //     textZone3.textContent = "";
-        //     textZone4.textContent = "";
-        //     imgPlayer1.innerHTML = "";
-        //     player1Name.textContent = "";
-        //     player1Name.style.background = "white";
-        //     imgPlayer2.innerHTML = "";
-        //     player2Name.textContent = "";
-        //     player2Name.style.background = "white";
-        //     confirmation.style.display = "none";
-        //     removeTextColor(textZone1, textZone2, textZone3, textZone4);
-        //     selectCharacter();
-        //   });
-        //   choiceBtn1.addEventListener("click", function() {
-        //     removeTextColor(textZone1, textZone2, textZone3, textZone4);
-        //     confirmation.style.display = "none";
-        //     portraitSection.style.display = "none";
-        //     textZone3.textContent = "....Combattez !"
-        //     textZone4.textContent = "";
-        //     mainScreen.style.backgroundImage = "url(../assets/img/backgrounds/bg_cbt_dragon_01.gif)";
-        //     mainScreen.style.backgroundRepeat = "no-repeat";
-        //     mainScreen.style.backgroundSize = "cover";
-        //     mainScreen.style.backgroundPosition = "center";
-        //     actionsButtonsSection.style.display = "block";
-        //     characterZoneContainer.style.display = "flex";
-        //     initializingBattle();
-        //   });
-        // };
-
-
-        // selectCharacter();
-
-
-
-
-        function playSound(soundElement){
-          const soundToPlay = `<audio id="audioPlay" src="assets/bgm/${soundElement}" preload="auto" hidden></audio>`;
-          audioPlayZone.innerHTML = soundToPlay;
-          const audioPlay = document.getElementById("audioPlay");
-          audioPlay.play();
-        }
-        function playSound2(soundElement){
-          const soundToPlay = `<audio id="audioPlay2" src="assets/bgm/${soundElement}" preload="auto" hidden></audio>`;
-          audioPlayZone2.innerHTML = soundToPlay;
-          const audioPlay2 = document.getElementById("audioPlay2");
-          audioPlay2.play();
-        }
-
-        function stopSound(){
-          const audioPlay = document.getElementById("audioPlay");
-          audioPlay.pause();
-          audioPlay.currentTime = 0;
-        }
-
-        const menus = document.querySelectorAll(".menu");
-
-        // function Menu(){
-        //   gameScreenTitle.style.display = "none";
-        //   mainMenu.style.display = "flex";
-        //   mainScreen.style.backgroundImage = "url(../assets/img/backgrounds/bg_cbt_2.gif)";
-        //   mainScreen.style.backgroundRepeat = "no-repeat";
-        //   mainScreen.style.backgroundSize = "cover";
-        //   mainScreen.style.backgroundPosition = "center";
-        //   playSound(bgm.mainMenu.bgm);
-        //   menus.forEach(menu => {
-        //     menu.addEventListener("click", function(){
-        //       playSound2(bgm.enterChoiceMenu.bgm);
-        //     });
-        //   });
-        // };
 
         textZone3.textContent = `Vous avez choisi ${characterName}.`;
         imgPlayer1.innerHTML = `<img src="assets/img/portraits/${characterPortrait}" alt="${characterPortrait}">`;
         player1Name.style.fontFamily = "Nova Square, sans-serif";
         player1Name.style.fontWeight = "bold";
         player1Name.textContent = characterName;
-        confirmation.style.display = "flex";
-        player2Name.textContent = randomP2Name;
-        player2Name.style.fontFamily = "Nova Square, sans-serif";
-        player2Name.style.fontWeight = "bold";
-        imgPlayer2.innerHTML = `<img src="assets/img/portraits/${characters[`char${random}`].portrait}" alt="${characters[`char${random}`].portrait}">`;
-        textZone4.textContent = `Votre adversaire a choisi ${randomP2Name}.`;
 
       }
     });
   });
-  validatorChoice(yesBtn, noBtn)
+  // validatorChoice(yesBtn, noBtn)
 };
+
 
 
 // function validatorChoice(choiceBtn1, choiceBtn2) {
@@ -624,11 +650,11 @@ function selectCharacter() {
 // };
 
 
-// selectCharacter();
+selectCharacter();
 
 
 function displayStats(obj) {
-  let valeurUn = 66;
+  let valeurUn = 50;
   const gaugeStrContainers = document.querySelectorAll(".str-gauge");
   const gaugeMagContainers = document.querySelectorAll(".mag-gauge");
   const gaugeDefContainers = document.querySelectorAll(".def-gauge");
@@ -636,7 +662,6 @@ function displayStats(obj) {
   for (i = 0; i < gaugeStrContainers.length; i++) {
     const gaugeStr = gaugeStrContainers[i];
     if (characters[`char${i}`]) {
-      console.log("C")
       const jaugeStr = `${valeurUn}`*`${characters[`char${i}`].stats.atk}`;
       gaugeStr.firstElementChild.style.width =`${jaugeStr}px`;
     }
@@ -644,7 +669,6 @@ function displayStats(obj) {
   for (i = 0; i < gaugeMagContainers.length; i++) {
     const gaugeMag = gaugeMagContainers[i];
     if (characters[`char${i}`]) {
-      console.log("C")
       const jaugeMag = `${valeurUn}`*`${characters[`char${i}`].stats.mag}`;
       gaugeMag.firstElementChild.style.width =`${jaugeMag}px`;
     }
@@ -652,7 +676,6 @@ function displayStats(obj) {
   for (i = 0; i < gaugeDefContainers.length; i++) {
     const gaugeDef = gaugeDefContainers[i];
     if (characters[`char${i}`]) {
-      console.log("C")
       const jaugeDef = `${valeurUn}`*`${characters[`char${i}`].stats.def}`;
       gaugeDef.firstElementChild.style.width =`${jaugeDef}px`;
     }
