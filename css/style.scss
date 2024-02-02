@@ -547,14 +547,14 @@ body, h1, h2, h3, p, ul, li {
 //----------------------------//  //----------------------------//
 
 #body-combat {
-  // background-image: url('../assets/img/backgrounds/sframe_vertical.png');
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center;
-  border: 20px solid rgb(255, 208, 0);
-  -webkit-box-shadow: 0px 0px 0px 5px #00ffff, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 15px 5px rgba(0,0,0,0);
-  box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 15px 5px rgba(0,0,0,0);
-
+  background-image: url('../assets/img/backgrounds/bw_flame_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  border: 10px solid white;
+  // -webkit-box-shadow: 0px 0px 0px 5px #00ffff, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 15px 5px rgba(0,0,0,0);
+  // box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 15px 5px rgba(0,0,0,0);
+height: 97vh;
 }
 //----------------------------//
 //            MENU            //
@@ -575,10 +575,10 @@ body, h1, h2, h3, p, ul, li {
     width: 250px;
     text-align: center;
     font-family: 'Honk', system-ui;
-    font-size: 50px;
+    font-size: 20px;
     margin: 10px;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    // border-top-right-radius: 30px;
+    // border-bottom-left-radius: 30px;
 
     border: 5px solid transparent;
     background-image: linear-gradient(to right, #69189E, #69189E), linear-gradient(to right, #69189E, #69189E);
@@ -602,10 +602,11 @@ body, h1, h2, h3, p, ul, li {
     border-radius: 5px;
     background: rgb(94, 94, 92);
     width: 550px;
-    height: 50px;
+    height: 80px;
     margin: 10px auto 20px auto;
     padding: 10px;
     font-size: 20px;
+    color: white;
   }
 }
 
@@ -614,7 +615,7 @@ body, h1, h2, h3, p, ul, li {
 //----------------------------//
 
 .screen-player-selector {
-  width: 100vw;
+
   display : flex;
   justify-content: space-evenly;
   align-items: center;
@@ -769,28 +770,52 @@ body, h1, h2, h3, p, ul, li {
 }
 
 
-.testbody {
-  height: 100vh;
+.characterZoneSelector {
   margin: 0;
+  padding:0;
+  width: 110vw;
   text-align: center;
-  // grid-template-rows: 800px 100px;
-  // grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
-  // align-items: center;
-  // justify-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.radio-wrapper.left1,
+.radio-wrapper.left2,
+.radio-wrapper.right1,
+.radio-wrapper.right2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.radio-wrapper.left1 {
+  grid-column: 1; /* Colonne de gauche */
+  width: 80px;
+}
+.radio-wrapper.left2 {
+  grid-column: 2; /* Colonne de gauche */
+  width: 80px;
+}
+.radio-wrapper.right1 {
+  grid-column: 4; /* Colonne de droite */
+  width: 80px;
+}
+.radio-wrapper.right2 {
+  grid-column: 5; /* Colonne de droite */
+  width: 80px;
+}
 main#carousel {
-  margin: 20px auto;
-  grid-row: 1 / 2;
-  grid-column: 1 / 8;
-  width: 100vw;
+  margin: 20px 5px;
+  grid-row: 1;
+  grid-column: 3;
+  width: 600px;
   height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   transform-style: preserve-3d;
-  perspective: 100px;
+  perspective: 45px;
   --items: 5;
   --middle: 3;
   --position: 1;
@@ -799,13 +824,7 @@ main#carousel {
 
 div.card {
   position: absolute;
-
-  --r: calc(var(--position) - var(--offset));
-  --abs: max(calc(var(--r) * -1), var(--r));
   transition: all 330ms linear;
-  transform: rotateY(calc(-5deg * var(--r)))
-    translateX(calc(-400px * var(--r)));
-  z-index: calc((var(--position) - var(--abs)));
 }
 
 div.card:nth-of-type(1) {
@@ -844,224 +863,124 @@ div.card:nth-of-type(11) {
 div.card:nth-of-type(12) {
   --offset: 12;
 }
-
 div.card:nth-of-type(13) {
   --offset: 13;
 }
-
 div.card:nth-of-type(14) {
   --offset: 14;
 }
-
 div.card:nth-of-type(15) {
   --offset: 15;
 }
-
 div.card:nth-of-type(16) {
   --offset: 16;
 }
-
 div.card:nth-of-type(17) {
   --offset: 17;
 }
-
-
 div.card:nth-of-type(18) {
   --offset: 18;
 }
-
 div.card:nth-of-type(19) {
   --offset: 19;
 }
-
 div.card:nth-of-type(20) {
   --offset: 20;
 }
-
-
 div.card:nth-of-type(21) {
   --offset: 21;
 }
-
 div.card:nth-of-type(22) {
   --offset: 22;
 }
-input:nth-of-type(1) {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
 
 
-}
-input:nth-of-type(1):checked ~ main#carousel {
+
+.radio-wrapper.left1 input:nth-of-type(1):checked ~ main#carousel {
   --position: 1;
 }
 
-input:nth-of-type(2) {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(2):checked ~ main#carousel {
+.radio-wrapper.left1 input:nth-of-type(2):checked ~ main#carousel {
   --position: 2;
 }
 
-input:nth-of-type(3) {
-  grid-column: 4 /5;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(3):checked ~ main#carousel {
+.radio-wrapper.left1 input:nth-of-type(3):checked ~ main#carousel {
   --position: 3;
 }
 
-input:nth-of-type(4) {
-  grid-column: 5 / 6;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(4):checked ~ main#carousel {
+.radio-wrapper.left1 input:nth-of-type(4):checked ~ main#carousel {
   --position: 4;
 }
 
-input:nth-of-type(5) {
-  grid-column: 6 / 7;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(5):checked ~ main#carousel {
+.radio-wrapper.left1 input:nth-of-type(5):checked ~ main#carousel {
   --position: 5;
 }
 
-input:nth-of-type(6) {
-  grid-column: 7 / 8;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(6):checked ~ main#carousel {
+.radio-wrapper.left1 input:nth-of-type(6):checked ~ main#carousel {
   --position: 6;
 }
 
-input:nth-of-type(7) {
-  grid-column: 8 / 9;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(7):checked ~ main#carousel {
+.radio-wrapper.left2 input:nth-of-type(7):checked ~ main#carousel {
   --position: 7;
 }
 
-input:nth-of-type(8) {
-  grid-column: 9 / 10;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(8):checked ~ main#carousel {
+.radio-wrapper.left2 input:nth-of-type(8):checked ~ main#carousel {
   --position: 8;
 }
 
-input:nth-of-type(9) {
-  grid-column: 10 / 11;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(9):checked ~ main#carousel {
+.radio-wrapper.left2 input:nth-of-type(9):checked ~ main#carousel {
   --position: 9;
 }
 
-input:nth-of-type(10) {
-  grid-column: 11 / 12;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(10):checked ~ main#carousel {
+.radio-wrapper.left2 input:nth-of-type(10):checked ~ main#carousel {
   --position: 10;
 }
 
-input:nth-of-type(11) {
-  grid-column: 11 / 12;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(11):checked ~ main#carousel {
+.radio-wrapper.left2 input:nth-of-type(11):checked ~ main#carousel {
   --position: 11;
 }
 
-input:nth-of-type(12) {
-  grid-column: 12 / 13;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(12):checked ~ main#carousel {
+.radio-wrapper.right1 input:nth-of-type(12):checked ~ main#carousel {
   --position: 12;
 }
 
-input:nth-of-type(13) {
-  grid-column: 13 / 14;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(13):checked ~ main#carousel {
+.radio-wrapper.right1 input:nth-of-type(13):checked ~ main#carousel {
   --position: 13;
 }
 
-input:nth-of-type(14) {
-  grid-column: 14 / 15;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(14):checked ~ main#carousel {
+.radio-wrapper.right1 input:nth-of-type(14):checked ~ main#carousel {
   --position: 14;
 }
 
-input:nth-of-type(15) {
-  grid-column: 15 / 16;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(15):checked ~ main#carousel {
+.radio-wrapper.right1 input:nth-of-type(15):checked ~ main#carousel {
   --position: 15;
 }
 
-input:nth-of-type(16) {
-  grid-column: 16 / 17;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(16):checked ~ main#carousel {
+.radio-wrapper.right1 input:nth-of-type(16):checked ~ main#carousel {
   --position: 16;
 }
 
-input:nth-of-type(17) {
-  grid-column: 17 / 18;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(17):checked ~ main#carousel {
+.radio-wrapper.right2 input:nth-of-type(17):checked ~ main#carousel {
   --position: 17;
 }
 
-input:nth-of-type(18) {
-  grid-column: 18 / 19;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(18):checked ~ main#carousel {
+.radio-wrapper.right2 input:nth-of-type(18):checked ~ main#carousel {
   --position: 18;
 }
 
-input:nth-of-type(19) {
-  grid-column: 19 / 20;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(19):checked ~ main#carousel {
+.radio-wrapper.right2 input:nth-of-type(19):checked ~ main#carousel {
   --position: 19;
 }
 
-input:nth-of-type(20) {
-  grid-column: 20 / 21;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(20):checked ~ main#carousel {
+.radio-wrapper.right2 input:nth-of-type(20):checked ~ main#carousel {
   --position: 20;
 }
 
-
-input:nth-of-type(21) {
-  grid-column: 21 / 22;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(21):checked ~ main#carousel {
+.radio-wrapper.right2 input:nth-of-type(21):checked ~ main#carousel {
   --position: 21;
 }
 
-input:nth-of-type(22) {
-  grid-column: 22 / 23;
-  grid-row: 2 / 3;
-}
-input:nth-of-type(22):checked ~ main#carousel {
+.radio-wrapper.right2 input:nth-of-type(22):checked + main#carousel {
   --position: 22;
 }
 
@@ -1069,17 +988,34 @@ input:nth-of-type(22):checked ~ main#carousel {
   display: none; /* Cache les boutons radio */
 }
 
+.radio-hidden:checked + .radio-avatar {
+  border-radius: 10px;
+  border-color: white;
+  // -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, -3px 14px 41px -2px #FF2121;
+  box-shadow: #FFF 0 -1px 4px, rgb(61, 226, 255) 0 -2px 10px, #008cff 0 -10px 20px, rgb(0, 4, 255) 0 -18px 40px, -3px 14px 41px -2px #000154;
+}
+.radio-hidden:checked + .radio-avatar + main#carousel {
+  --position: 2;
+}
+
 .radio-avatar {
   display: inline-block;
-  width: 60px; /* Largeur du faux bouton radio */
-  height: 60px; /* Hauteur du faux bouton radio */
+  width: 70px;
+  height: 70px;
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
-  border: 5px solid purple;
-  margin: 10px 28px;
+  border: 5px solid black;
+  margin: 10px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
 }
 
-.radio-hidden:checked + .radio-avatar {
-  border-color: rgb(255, 221, 0); /* Change la couleur de la bordure lors de la sélection */
+.radio-avatar-img {
+width: 150px;
 }

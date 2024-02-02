@@ -45,6 +45,7 @@ const characters = {
   char0: {
     name: "Crystal Mauler",
     portrait: "crystal_mauler.png",
+    portrait_bd: "crystal_mauler.png",
     story: "Un titans des montagnes de cristal, incarne la force brute et une résistance inébranlable.",
     id: 0,
     stats: {
@@ -61,6 +62,7 @@ const characters = {
   char1: {
     name: "Fire Knight",
     portrait: "fire_knight.png",
+    portrait_bd: "fire_knight.png",
     story: "Un chevalier du feu, maîtrise la puissance des flammes pour défaire ses ennemis.",
     id: 1,
     stats: {
@@ -77,6 +79,7 @@ const characters = {
   char2: {
     name: "Metal Bladekeeper",
     portrait: "metal_bladekeeper.png",
+    portrait_bd: "fire_knight.png",
     story: "Une voleuse recherchée dans le royaume et qui vend ses services aux plus offrants.",
     id: 2,
     stats: {
@@ -93,6 +96,7 @@ const characters = {
   char3: {
     name: "Leaf Ranger",
     portrait: "leaf_ranger.png",
+    portrait_bd: "leaf_ranger.png",
     story: "Un ranger de Nervalis'tel qui se fond dans la nature pour traquer ses proies.",
     id: 3,
     stats: {
@@ -109,6 +113,7 @@ const characters = {
   char4: {
     name: "Water Priestess",
     portrait: "water_priestess.png",
+    portrait_bd:"water_priestess.png",
     story: "Une prêtresse de l'eau qui soigne les âmes blessées et purifie les eaux troubles.",
     id: 4,
     stats: {
@@ -125,6 +130,7 @@ const characters = {
   char5: {
     name: "Wind Hashashin",
     portrait: "wind_hashashin.png",
+    portrait_bd: "wind_hashashin.png",
     story: "Un hashashin qui se déplace comme une brise silencieuse pour éliminer ses cibles.",
     id: 5,
     stats: {
@@ -141,6 +147,7 @@ const characters = {
   char6: {
     name: "Spear Guard",
     portrait: "spearwoman.png",
+    portrait_bd: "spearwoman.png",
     story: "Un garde-lance qui maîtrise l'art de la lance. Elle adore les duels et ne perd jamais.",
     id: 6,
     stats: {
@@ -157,6 +164,7 @@ const characters = {
   char7: {
     name: "The Wanderer",
     portrait: "fire_warrior.png",
+    portrait_bd: "fire_warrior.png",
     story: "Un vagabond en quête de vérité dans les terres désolées et les ruines oubliées.",
     id: 7,
     stats: {
@@ -173,6 +181,7 @@ const characters = {
   char8: {
     name: "Moine",
     portrait: "ground_monk.png",
+    portrait_bd: "ground_monk.png",
     story: "Un moine qui protège le temple de l'Arbre sacré. Il aurait plus de 500 ans.",
     id: 8,
     stats: {
@@ -189,6 +198,7 @@ const characters = {
   char9: {
     name: "Orc Shaman",
     portrait: "orc_shaman.png",
+    portrait_bd: "orc_shaman.png",
     story: "Un moine qui protège le temple de l'Arbre sacré. Il aurait plus de 500 ans.",
     id: 9,
     stats: {
@@ -205,6 +215,7 @@ const characters = {
   char10: {
     name: "Viking Des Fjörds",
     portrait: "viking.png",
+    portrait_bd: "viking.png",
     story: "Un guerrier brutal qui ne cherche que des adversaires forts. Ne craint pas la mort.",
     id: 10,
     stats: {
@@ -221,6 +232,7 @@ const characters = {
   char11: {
     name: "Soldat Valkine",
     portrait: "human_female_02.png",
+    portrait_bd: "human_female_02.png",
     story: "Lieutenant de l'avant garde du royaume de Xor'l. Elle est redoutable au combat.",
     id: 11,
     stats: {
@@ -231,12 +243,13 @@ const characters = {
     atk_img: "assets/img/stats_img/gm_atk.png",
     mag_img: "assets/img/stats_img/gm_mag.png",
     def_img: "assets/img/stats_img/gm_def.png",
-    special: "Frappe de l'aigle",
-    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+    special: "Dégainage Eclair",
+    spe_img: "assets/img/skill_img/Dégainage Eclair.png"
   },
   char12: {
     name: "Solyn'Eri",
     portrait: "Light_elf_female_01.png",
+    portrait_bd: "Light_elf_female_01.png",
     story: "Une haute Elfe de l'Arbre sacré. Sa chevelure prouve qu'elle a plus de 1000 ans.",
     id: 12,
     stats: {
@@ -253,6 +266,7 @@ const characters = {
   char13: {
     name: "Maître Magus",
     portrait: "human_male_02.png",
+    portrait_bd: "human_male_02.png",
     story: "Un maître de la Tour Grise qui peut manier toutes les formes de magies connues.",
     id: 13,
     stats: {
@@ -269,6 +283,7 @@ const characters = {
   char14: {
     name: "Blades Dancer",
     portrait: "human_female_03.png",
+    portrait_bd: "human_female_03.png",
     story: "Assassin, danseuse et magicienne. Elle peut faire face à toute situation.",
     id: 14,
     stats: {
@@ -280,11 +295,12 @@ const characters = {
     mag_img: "assets/img/stats_img/lr_mag.png",
     def_img: "assets/img/stats_img/lr_def.png",
     special: "Danse-Lames du Soleil",
-    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+    spe_img: "assets/img/skill_img/Danse-Lames du Soleil.png"
   },
   char15: {
     name: "Magus Ombral",
     portrait: "Dark_one_male_04.png",
+    portrait_bd: "Dark_one_male_04.png",
     story: "Un ancien Maître Magus qui s'est laissé dévorer par son propre pouvoir.",
     id: 15,
     stats: {
@@ -301,6 +317,7 @@ const characters = {
   char16: {
     name: "Seigneur Ombral",
     portrait: "Dark_one_male_01.png",
+    portrait_bd: "Dark_one_male_01.png",
     story: "Commandant de l'armée du Magus Ombral. C'est un ancien héro dêchu.",
     id: 16,
     stats: {
@@ -317,6 +334,7 @@ const characters = {
   char17: {
     name: "Princesse de Xor'l",
     portrait: "human_female_01.png",
+    portrait_bd: "human_female_01.png",
     story: "Les princesses de Xor'l apprennent l'art de la guerre dès leur plus jeune âge.",
     id: 17,
     stats: {
@@ -328,11 +346,12 @@ const characters = {
     mag_img: "assets/img/stats_img/gm_mag.png",
     def_img: "assets/img/stats_img/gm_def.png",
     special: "Rage de Xor'l",
-    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+    spe_img: "assets/img/skill_img/Rage de Xor'l.png"
   },
   char18: {
     name: "Elfe De Terre-Feu",
     portrait: "Dark_elf_female_01.png",
+    portrait_bd: "Dark_elf_female_01.png",
     story: "Une des derniers survivants du clan Terre-Feu. Peut invoquer des esprits célestes",
     id: 18,
     stats: {
@@ -349,6 +368,7 @@ const characters = {
   char19: {
     name: "Seigneur Vampire",
     portrait: "Dark_one_male_03.png",
+    portrait_bd: "Dark_one_male_03.png",
     story: "Une créature qui se nourrit du sang des vivants et peut ensuite les contrôler.",
     id: 19,
     stats: {
@@ -365,6 +385,7 @@ const characters = {
   char20: {
     name: "Guerrière Lione",
     portrait: "beast_female_01.png",
+    portrait_bd: "beast_female_01.png",
     story: "Redoutable chasseuse du peuple des bêtes. Ses griffes transpercent les armures.",
     id: 20,
     stats: {
@@ -375,12 +396,13 @@ const characters = {
     atk_img: "assets/img/stats_img/gm_atk.png",
     mag_img: "assets/img/stats_img/gm_mag.png",
     def_img: "assets/img/stats_img/gm_def.png",
-    special: "Pluie Sanguine",
-    spe_img: "assets/img/skill_img/Six fists of heaven.png"
+    special: "Griffe Bestiale",
+    spe_img: "assets/img/skill_img/Griffe Bestiale.png"
   },
   char21: {
     name: "Chevalier Fantôme",
     portrait: "human_male_04.png",
+    portrait_bd: "human_male_04.png",
     story: "Un ancien chevalier mort dont l'âme ne trouve pas le repos. Il cherche la vérité.",
     id: 21,
     stats: {
@@ -391,7 +413,7 @@ const characters = {
     atk_img: "assets/img/stats_img/gm_atk.png",
     mag_img: "assets/img/stats_img/gm_mag.png",
     def_img: "assets/img/stats_img/gm_def.png",
-    special: "The Six Fists Of Heaven",
+    special: "Colère du Revenant",
     spe_img: "assets/img/skill_img/Six fists of heaven.png"
   }
 };
@@ -568,46 +590,18 @@ let playerChoice = false;
 function selectCharacter() {
   textZone1.textContent = "Bienvenue dans l'arène Invocateur.";
   textZone2.textContent = "Veuillez choisir votre combattant.";
+  textZone3.textContent = "";
   characterChoice(characters);
+  console.log("a")
   portraits.forEach(portrait => {
     portrait.addEventListener("click", function() {
+      console.log("b")
       const charIndex = portrait.firstChild.getAttribute("data-char");
       if (characters[`char${charIndex}`]) {
         const characterName = characters[`char${charIndex}`].name;
-        let characterPortrait = "";
-        if (characterName == "Crystal Mauler") {
-          textZone3.style.color = "#85dbf2";
-          player1Name.style.background = "#85dbf2";
-          playerChoice = true;
-          characterPortrait = "crystal_mauler.png";
-        } else if (characterName == "Fire Knight") {
-          textZone3.style.color = "#ee692f";
-          player1Name.style.background = "#ee692f";
-          playerChoice = true;
-          characterPortrait = "fire_knight.png";
-        } else if (characterName == "Metal Bladekeeper") {
-          textZone3.style.color = "#c3c0c6";
-          player1Name.style.background = "#c3c0c6";
-          playerChoice = true;
-          characterPortrait = "metal_bladekeeper.png";
-        } else if (characterName == "Leaf Ranger") {
-          textZone3.style.color = "#11eb03";
-          player1Name.style.background = "#11eb03";
-          playerChoice = true;
-          characterPortrait = "leaf_ranger.png";
-        } else {
-          textZone3.style.color = "#3a8bf9";
-          player1Name.style.background = "#3a8bf9";
-          playerChoice = true;
-          characterPortrait = "water_priestess.png";
-        }
-
-
         textZone3.textContent = `Vous avez choisi ${characterName}.`;
-        imgPlayer1.innerHTML = `<img src="assets/img/portraits/${characterPortrait}" alt="${characterPortrait}">`;
         player1Name.style.fontFamily = "Nova Square, sans-serif";
         player1Name.style.fontWeight = "bold";
-        player1Name.textContent = characterName;
 
       }
     });
@@ -615,7 +609,7 @@ function selectCharacter() {
   // validatorChoice(yesBtn, noBtn)
 };
 
-
+selectCharacter();
 
 // function validatorChoice(choiceBtn1, choiceBtn2) {
 //   choiceBtn2.addEventListener("click", function() {
@@ -720,3 +714,50 @@ const menus = document.querySelectorAll(".menu");
 //     });
 //   });
 // };
+
+// function displayCardsSelector(){
+//   document.addEventListener('DOMContentLoaded', function() {
+//     const radios = document.querySelectorAll('.radio-wrapper input[type="radio"]');
+//     // Ajoutez un écouteur d'événements à chaque bouton radio
+//     radios.forEach((radio, index) => {
+//       radio.addEventListener('change', (e) => {
+//         if (e.target.checked) {
+//           // Calculer la nouvelle position du carrousel
+//           // Remplacez 300 par la largeur réelle de vos cartes de carrousel
+//           const newPosition = index * -400;
+//           // Mettre à jour le style de votre carrousel pour le décaler
+//           const carousel = document.getElementById('carousel');
+//           carousel.style.transform = `translateX(${newPosition}px)`;
+//         }
+//       });
+//     });
+//   });
+// }
+// displayCardsSelector();
+
+
+// Fonction pour mettre à jour les propriétés CSS en fonction de la position
+function updateCardStyles(selectedIndex) {
+  cards.forEach((card, index) => {
+    const position = index + 1;
+    const offset = selectedIndex + 1;
+    const r = offset - position;
+    const abs = Math.max(Math.abs(r), Math.abs(-r));
+    const zIndex = position - abs;
+
+    card.style.transform = `rotateY(${(-5 * r)}deg) translateX(${(-400 * r)}px)`;
+    card.style.zIndex = zIndex;
+  });
+}
+
+// Écouter les changements de sélection d'éléments radio
+const radioInputs = document.querySelectorAll('.radio-hidden');
+radioInputs.forEach((input, index) => {
+  input.addEventListener('change', () => {
+    if (input.checked) {
+      updateCardStyles(index);
+    }
+  });
+});
+// Initialiser le carrousel à la première position
+updateCardStyles(18);
